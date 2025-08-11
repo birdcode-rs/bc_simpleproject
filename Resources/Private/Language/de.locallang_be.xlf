@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2025-08-10UTC21:54:580">
+        <header>
+            <authorName>Bird Code</authorName>
+            <authorEmail>bird.dev@birdcode.in.rs</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
+                <source>ROOT page ID</source>
+                <target>ROOT-Seiten-ID</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logo">
+                <source>Logo</source>
+                <target>Logo</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logotitle">
+                <source>Logo Title</source>
+                <target>Logo Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions">
+                <source>Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
+                <target>Logo-Abmessungen [fügen Sie JSON-Code wie {"width":"500","height":"300"} ein]</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogo">
+                <source>Footer Logo</source>
+                <target>Footer-Logo</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions">
+                <source>Footer Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
+                <target>Footer-Logo-Abmessungen [fügen Sie JSON-Code wie {"width":"500","height":"300"} ein]</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footernote">
+                <source>Footer Note</source>
+                <target>Fußzeilenhinweis</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footercopytext">
+                <source>Footer Copy</source>
+                <target>Fußzeilentext</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.email">
+                <source>Email</source>
+                <target>E-Mail</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.emaillabel">
+                <source>Email Label</source>
+                <target>E-Mail-Beschriftung</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.phone">
+                <source>Phone</source>
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.phonelabel">
+                <source>Phone Label</source>
+                <target>Telefon-Beschriftung</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.address">
+                <source>Address</source>
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.addresslong">
+                <source>Address Long</source>
+                <target>Adresse Lang</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.linkedinurl">
+                <source>LinkedIn URL</source>
+                <target>LinkedIn-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.xurl">
+                <source>X URL</source>
+                <target>X-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.facebookurl">
+                <source>Facebook URL</source>
+                <target>Facebook-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.instagramurl">
+                <source>Instagram URL</source>
+                <target>Instagram-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.tiktokurl">
+                <source>TikTok URL</source>
+                <target>TikTok-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.discordurl">
+                <source>Discord URL</source>
+                <target>Discord-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.youtubeurl">
+                <source>You Tube URL</source>
+                <target>YouTube-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.githuburl">
+                <source>Github URL</source>
+                <target>Github-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl">
+                <source>Google map URL</source>
+                <target>Google-Maps-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapembededurl">
+                <source>Google Map Iframe embeded URL</source>
+                <target>Google Maps Iframe eingebettete URL</target>
+            </trans-unit> 
+            <trans-unit id="tt_content.embededcss">
+                <source>Add CSS: each new CSS line should start with ###UID### in order to apply the style to the current element</source>
+                <target>CSS hinzufügen: Jede neue CSS-Zeile sollte mit ###UID### beginnen, um den Stil auf das aktuelle Element anzuwenden.</target>
+            </trans-unit>        
+        </body>
+    </file>
+</xliff>
