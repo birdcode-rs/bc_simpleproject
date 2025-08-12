@@ -35,12 +35,6 @@
             "BirdCode\\BcSimpleproject\\": "Classes/"
         }
     },
-    "repositories": [
-		{
-			"type": "path",
-			"url": "packages/*"
-		}
-	],
 	"config": {
 		"preferred-install": {
 			"typo3/cms-core": "source",
