@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Extension Manager/Repository config file for ext "bc_simpleproject".
- */
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Simple Project',
     'description' => 'Additional items for your project',
