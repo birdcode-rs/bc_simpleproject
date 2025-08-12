@@ -16,3 +16,6 @@ $newFields = [
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $newFields);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'embededcss', '', 'after:space_after_class');
+
+
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['bc_simpleproject'] = 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_db.xlf:pi1_title';

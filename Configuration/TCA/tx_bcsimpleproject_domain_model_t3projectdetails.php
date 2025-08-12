@@ -1,18 +1,18 @@
 <?php
 return [
     'ctrl' => [
+        'title' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_db.xlf:tx_bcsimpleproject_domain_model_t3projectdetails',
+        'descriptionColumn' => 'notes',
         'label' => 'rootpage',
-        #'label_alt' => 'last_name,first_name',
+        'groupName' => 'bc_simpleproject',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'sortby' => 'sorting',
-        #'default_sortby' => 'ORDER BY last_name, first_name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate', 
         'prependAtCopy' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
         'delete' => 'deleted',
-        'title' => 'Project config',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'enablecolumns' => [
@@ -21,6 +21,7 @@ return [
             'endtime' => 'endtime',
             'fe_group' => 'fe_group',
         ],
+        'searchFields' => 'rootpage,logotitle,footernote,footercopytext,emaillabel,phonelabel,address,addresslong',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
@@ -207,13 +208,9 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.email',
             'l10n_mode' => 'exclude', 
             'config' => [
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true,
-                ],
-                'type' => 'email',
-                'size' => 20,
-                'max' => 255,
-            ]
+                'type' => 'link',
+                'allowedTypes' => ['email'],
+            ],
         ],
         'emaillabel' => [
             'exclude' => false,
@@ -231,11 +228,9 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.phone',
             'l10n_mode' => 'exclude', 
             'config' => [
-                'type' => 'input',
-                'size' => 40,
-                'eval' => 'trim',
-                'max' => 255
-            ]
+                'type' => 'link',
+                'allowedTypes' => ['phone'],
+            ],
         ],
         'phonelabel' => [
             'exclude' => false,
@@ -369,7 +364,8 @@ return [
                 --palette--;;language,--div--;
                 LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 --palette--;;paletteHidden,
-                --palette--;;paletteAccess;'
+                --palette--;;paletteAcces, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                --palette--;;paletteLanguage,'
         ]
     ],
     'palettes' => [
@@ -405,6 +401,8 @@ return [
                 fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel
             ',
         ],
-        'language' => ['showitem' => 'sys_language_uid, l10n_parent'],
+        'paletteLanguage' => [
+            'showitem' => 'sys_language_uid,l10n_parent,',
+        ]
     ],
 ];
