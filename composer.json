@@ -12,12 +12,16 @@
         {
             "name": "Bird Dev",
             "role": "Developer",
+            "email": "bird.dev@birdcode.in.rs",
             "homepage": "https://birdcode.tech"
         }
     ],
     "license": [
         "GPL-2.0-or-later"
     ],
+    "replace": {
+        "birdcode/bc-simpleproject": "*"
+    },
     "require": {
         "php": ">= 8.0 < 8.4", 
         "typo3/cms-backend": "^13.0.0",
@@ -28,21 +32,28 @@
     },
     "autoload": {
         "psr-4": {
-            "BirdCode\\BcSimpleproject\\": "Classes"
+            "BirdCode\\BcSimpleproject\\": "Classes/"
         }
     },
-    "replace": {
-        "typo3-ter/bc-simpleproject": "self.version"
-    },
-    "config": {
-        "vendor-dir": ".Build/vendor",
-        "bin-dir": ".Build/bin",
-        "lock": false,
-        "allow-plugins": {
-            "typo3/class-alias-loader": true,
-            "typo3/cms-composer-installers": true
-        }
-    },
+    "repositories": [
+		{
+			"type": "path",
+			"url": "packages/*"
+		}
+	],
+	"config": {
+		"preferred-install": {
+			"typo3/cms-core": "source",
+			"*": "dist"
+		},
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin",
+		"sort-packages": true,
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		}
+	},
     "extra": {
         "typo3/cms": {
             "extension-key": "bc_simpleproject",
