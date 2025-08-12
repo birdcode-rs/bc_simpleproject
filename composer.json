@@ -1,0 +1,53 @@
+{
+    "name": "birdcode/bc-simpleproject",
+    "type": "typo3-cms-extension",
+    "description": "Additional items for your project",
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "project"
+    ],
+    "homepage": "https://birdcode.tech/",
+    "authors": [
+        {
+            "name": "Bird Dev",
+            "role": "Developer",
+            "homepage": "https://birdcode.tech"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "php": ">= 8.0 < 8.4", 
+        "typo3/cms-backend": "^13.0.0",
+        "typo3/cms-core": "^13.0.0",
+        "typo3/cms-extbase": "^13.0.0",
+        "typo3/cms-frontend": "^13.0.0",
+        "typo3/cms-fluid": "^13.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BirdCode\\BcSimpleproject\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/bc-simpleproject": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin",
+        "lock": false,
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bc_simpleproject",
+            "app-dir": ".Build",
+            "web-dir": ".Build/Web"
+        }
+    }
+}

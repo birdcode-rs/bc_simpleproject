@@ -1,0 +1,35 @@
+###############################################################
+#### Include T3projectdetailsProcessor | variable: project ####
+###############################################################
+
+page.10.dataProcessing.1389 = BirdCode\BcSimpleproject\DataProcessing\T3projectdetailsProcessor
+ 
+
+########################################
+#### Support rendering embedded css ####
+########################################
+page.headerData {
+    1989 = COA
+    1989.wrap = <style type="text/css">|</style>
+    1989.9 = CONTENT
+    1989.9 {
+        table = tt_content
+        select.where = hidden=0
+        select.pidInList = this
+        select.orderBy = sorting
+
+        renderObj = COA
+        renderObj {
+            4 = TEXT
+            4.field = embededcss
+            4.stdWrap.replacement.10 {
+                search = ###UID###
+                replace.cObject = TEXT
+                replace.cObject.value = #c{field:uid}
+                replace.cObject.insertData = 1
+            }
+            4.if.isTrue.data = field:embededcss
+        }
+    }
+}
+
