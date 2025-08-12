@@ -91,8 +91,8 @@
                 <target>YouTube-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.githuburl">
-                <source>Github URL</source>
-                <target>Github-URL</target>
+                <source>GitHub URL</source>
+                <target>GitHub-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl">
                 <source>Google map URL</source>

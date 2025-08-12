@@ -70,7 +70,7 @@
                 <source>You Tube URL</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.githuburl">
-                <source>Github URL</source>
+                <source>GitHub URL</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl">
                 <source>Google map URL</source>
