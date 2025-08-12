@@ -10,8 +10,6 @@ use TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface;
 use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
 use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails;
 use BirdCode\BcSimpleproject\Domain\Repository\T3projectdetailsRepository;
-
- 
  
 /**
  * T3projectdetailsProcessor
@@ -59,9 +57,9 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
      *
      * @param int $pageId
      *
-     * @return T3projectdetails
+     * @return ?T3projectdetails
      */
-    protected function getProjectDetails(int $pageId): T3projectdetails 
+    protected function getProjectDetails(int $pageId): ?T3projectdetails 
     {
         /** @var QuerySettingsInterface $querySettings */
         $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
@@ -69,7 +67,9 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
 
         $t3projectRepository = GeneralUtility::makeInstance(T3projectdetailsRepository::class);
         $t3projectRepository->setDefaultQuerySettings($querySettings);
- 
-        return $t3projectRepository->findBy(['rootpage' => $pageId], $this->defaultOrderings)->getFirst();
+
+        if (!empty($projects = $t3projectRepository->findBy(['rootpage' => $pageId], $this->defaultOrderings))) {
+            return $projects->getFirst();
+        }
     }
 }
