@@ -2,7 +2,7 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_db.xlf:tx_bcsimpleproject_domain_model_t3projectdetails',
-        'descriptionColumn' => 'notes',
+        'descriptionColumn' => 'logotitle',
         'label' => 'rootpage',
         'groupName' => 'bc_simpleproject',
         'languageField' => 'sys_language_uid',
@@ -136,7 +136,7 @@ return [
             'config' => [
                 'type' => 'file',
                 'maxitems' => 1,
-                'allowed' => 'common-image-types'
+                'allowed' => 'common-image-types',
             ],
         ],
         'logodimensions' => [
@@ -147,6 +147,12 @@ return [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 4,
+                'placeholder' => 'e.g. {"width":"500","height":"300"}',
+                'eval' => 'trim',
+                'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ]
             ]
         ],
         'logotitle' => [
@@ -157,6 +163,8 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                'placeholder' => 'e.g. Your Company Logo',
+                'default' => '',
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -170,7 +178,12 @@ return [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
-                'max' => 255
+                'max' => 255,
+                'placeholder' => 'e.g. Powered by TYPO3',
+                'default' => '',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ]
             ]
         ],
         'footercopytext' => [
@@ -181,7 +194,12 @@ return [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
-                'max' => 255
+                'max' => 255,
+                'placeholder' => 'e.g. © 2023 Your Company Name',
+                'default' => '',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ]
             ]
         ],
         'footerlogo' => [
@@ -201,6 +219,12 @@ return [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 4,
+                'placeholder' => 'e.g. {"width":"500","height":"300"}',
+                'eval' => 'trim',
+                'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'email' => [
@@ -210,6 +234,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['email'],
+                'placeholder' => 'mailto:',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'emaillabel' => [
@@ -220,7 +249,12 @@ return [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
-                'max' => 255
+                'max' => 255,
+                'placeholder' => 'Email',
+                'default' => '',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true, 
+                ]            
             ]
         ],
         'phone' => [
@@ -229,7 +263,12 @@ return [
             'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
-                'allowedTypes' => ['phone'],
+                'allowedTypes' => ['telephone'],
+                'placeholder' => 'tel:+1234567890',
+                'default' => '',
+                'eval' => 'trim',
+                'max' => 255,
+                'size' => 40,
             ],
         ],
         'phonelabel' => [
@@ -240,7 +279,12 @@ return [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
-                'max' => 255
+                'max' => 255,
+                'placeholder' => 'Phone',
+                'default' => '',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'address' => [
@@ -251,7 +295,9 @@ return [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
-                'max' => 255
+                'max' => 255,
+                'placeholder' => '1234 Street Name, City, State, ZIP',
+                'default' => '',
             ]
         ],
         'addresslong' => [
@@ -262,6 +308,12 @@ return [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 4,
+                'placeholder' => '1234 Street Name, City, State, ZIP',
+                'eval' => 'trim',
+                'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'linkedinurl' => [
@@ -271,6 +323,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://www.linkedin.com/in/yourprofile',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'xurl' => [
@@ -280,6 +337,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://x.com/yourprofile',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'facebookurl' => [
@@ -289,6 +351,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://www.facebook.com/YourPage',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'instagramurl' => [
@@ -298,6 +365,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://www.instagram.com/yourprofile',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'tiktokurl' => [
@@ -307,6 +379,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://www.tiktok.com/@yourprofile',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'discordurl' => [
@@ -316,6 +393,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://discord.gg/yourserver',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'youtubeurl' => [
@@ -325,6 +407,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://www.youtube.com/channel/yourchannel',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'githuburl' => [
@@ -334,6 +421,11 @@ return [
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
+                'placeholder' => 'https://github.com/profile',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
             ],
         ],
         'googlemapurl' => [
@@ -344,6 +436,11 @@ return [
                 'type' => 'text',
                 'cols' => 60,
                 'rows' => 4,
+                'placeholder' => 'https://www.google.com/maps/place/Your+Location',
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'googlemapembededurl' => [
@@ -354,6 +451,11 @@ return [
                 'type' => 'text',
                 'cols' => 60,
                 'rows' => 4,
+                'placeholder' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d...',
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
     ],
@@ -369,19 +471,12 @@ return [
         ]
     ],
     'palettes' => [
-        'project' => ['showitem' => '
-            rootpage,--linebreak--,
-            logo,
-            logotitle,logodimensions,--linebreak--,
+        'project' => [
+            'showitem' => 'rootpage,--linebreak--,logo,logodimensions,--linebreak--,logotitle,--linebreak--,
             footerlogo,footerlogodimensions,--linebreak--,
-            footernote,
-            footercopytext,--linebreak--,
-            email,
-            emaillabel,--linebreak--,
-            phone,
-            phonelabel,--linebreak--,
-            address,
-            addresslong'
+            footernote, footercopytext,--linebreak--,
+            email, emaillabel,--linebreak--,
+            phone, phonelabel,--linebreak--, address, addresslong'
         ],
         'google' => [
             'showitem' => 'googlemapurl, --linebreak--, googlemapembededurl'
