@@ -111,9 +111,7 @@ class FilesProcessor implements DataProcessorInterface
     {
         /** @var FileCollector $fileCollector */
         $fileCollector = GeneralUtility::makeInstance(FileCollector::class);
-
-       
-
+ 
         if (!empty($this->processorConfiguration['references.'])) {
             $referencesUidList = (string)$this->contentObjectRenderer->stdWrapValue('references', $this->processorConfiguration ?? []);
             $referencesUids = GeneralUtility::intExplode(',', $referencesUidList, true);
