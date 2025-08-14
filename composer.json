@@ -30,6 +30,9 @@
         "typo3/cms-frontend": "^13.0.0",
         "typo3/cms-fluid": "^13.0.0"
     },
+    "suggest": {
+        "friendsoftypo3/headless": "TYPO3 Headless API"
+    },
     "autoload": {
         "psr-4": {
             "BirdCode\\BcSimpleproject\\": "Classes"

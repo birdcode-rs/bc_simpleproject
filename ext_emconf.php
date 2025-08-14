@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'bird.dev@birdcode.in.rs',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
-    'version' => '0.0.2',
+    'version' => '0.1.0',
     'constraints' => [
         'depends' => [
             'php' => '8.1.0-8.4.99',
@@ -19,7 +19,9 @@ $EM_CONF[$_EXTKEY] = [
             'frontend' => '13.0.0-13.9.99',
         ],
         'conflicts' => [],
-        'suggests' => [],
+        'suggests' => [
+            'headless' => '4.0.0-4.9.99',
+        ],
     ],
 ];
 
