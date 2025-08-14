@@ -7,7 +7,7 @@
 ## Add T3projectdetails as parameter to page json ##
 ###################################################
 page.10.fields {
-    T3projectdetails =< lib.T3projectdetails
+    t3projectdetails =< lib.T3projectdetails
 }
  
 ##############################################
