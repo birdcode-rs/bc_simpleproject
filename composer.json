@@ -7,7 +7,11 @@
         "extension",
         "project"
     ],
-    "homepage": "https://birdcode.tech/",
+    "homepage": "https://extensions.typo3.org/extension/bc_simpleproject",
+    "support": {
+        "source": "https://github.com/birdcode-rs/bc_simpleproject",
+        "issues": "https://github.com/birdcode-rs/bc_simpleproject/issues"
+    },
     "authors": [
         {
             "name": "Bird Dev",
