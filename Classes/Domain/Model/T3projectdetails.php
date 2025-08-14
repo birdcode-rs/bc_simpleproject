@@ -20,8 +20,6 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class T3projectdetails extends AbstractEntity
 {
     /**
-     * Hidden
-     *
      * @var bool
      */
     protected $hidden = false;

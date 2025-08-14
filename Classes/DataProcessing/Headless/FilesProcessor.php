@@ -58,6 +58,11 @@ class FilesProcessor implements DataProcessorInterface
     protected $fileObjects = [];
 
     /**
+    * @var string
+    */
+    protected $projectDatabase = 'tx_bcsimpleproject_domain_model_t3projectdetails';
+
+    /**
      * Process data for a gallery, for instance the CType "textmedia"
      *
      * @param ContentObjectRenderer $cObj The content object renderer, which contains data of the content element
@@ -75,7 +80,7 @@ class FilesProcessor implements DataProcessorInterface
         if (isset($processorConfiguration['if.']) && !$cObj->checkIf($processorConfiguration['if.'])) {
             return $processedData;
         }
- 
+         
         $properties = [];
 
         if (isset($processorConfiguration['processingConfiguration.'])) {
@@ -107,11 +112,12 @@ class FilesProcessor implements DataProcessorInterface
         /** @var FileCollector $fileCollector */
         $fileCollector = GeneralUtility::makeInstance(FileCollector::class);
 
+       
+
         if (!empty($this->processorConfiguration['references.'])) {
             $referencesUidList = (string)$this->contentObjectRenderer->stdWrapValue('references', $this->processorConfiguration ?? []);
             $referencesUids = GeneralUtility::intExplode(',', $referencesUidList, true);
             $fileCollector->addFileReferences($referencesUids);
-
             $referenceConfiguration = $this->processorConfiguration['references.'];
             $relationField = $this->contentObjectRenderer->stdWrapValue('fieldName', $referenceConfiguration);
 
@@ -121,22 +127,19 @@ class FilesProcessor implements DataProcessorInterface
                 $relationTable = $this->contentObjectRenderer->stdWrapValue(
                     'table',
                     $referenceConfiguration,
-                    $this->contentObjectRenderer->getCurrentTable()
+                    $this->projectDatabase
                 );
-
-                error_log('$this->processorConfigurationproject: ' . print_r($this->processorConfiguration['project'], true));
-
-
+  
                 if (!empty($relationTable)) {
                     $fileCollector->addFilesFromRelation(
                         $relationTable,
                         $relationField,
-                        $this->processorConfiguration['project']
+                        ['uid' => $referenceConfiguration['uid']]
                     );
                 }
             }
         }
-
+ 
         $files = $this->contentObjectRenderer->stdWrapValue('files', $this->processorConfiguration);
         if ($files) {
             $files = GeneralUtility::intExplode(',', $files, true);
@@ -199,12 +202,7 @@ class FilesProcessor implements DataProcessorInterface
 
         return $data;
     }
-    
-    /**
-     * Method getFileUtility
-     *
-     * @return FileUtility
-     */
+
     protected function getFileUtility(): FileUtility
     {
         return GeneralUtility::makeInstance(FileUtility::class);

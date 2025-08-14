@@ -7,4 +7,18 @@ services:
   BirdCode\BcSimpleproject\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
- 
+
+  BirdCode\BcSimpleproject\Utility\Headless\FileUtility:
+    public: true
+
+  BirdCode\BcSimpleproject\DataProcessing\Headless\FilesProcessor:
+    public: true
+    shared: true
+    tags:
+      - { name: 'data.processor', identifier: 'bcsimpleproject-headless-files' }
+
+  BirdCode\BcSimpleproject\DataProcessing\Headless\MenuProcessor:
+    public: true
+    shared: false
+    tags:
+      - { name: 'data.processor', identifier: 'bcsimpleproject-headless-menu' }

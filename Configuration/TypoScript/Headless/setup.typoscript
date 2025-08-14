@@ -1,13 +1,23 @@
+###################
+## Include page ##
+###################
+@import "EXT:bc_simpleproject/Configuration/TypoScript/Headless/Page/*.typoscript"
 
-
+###################################################
+## Add T3projectdetails as parameter to page json ##
+###################################################
 page.10.fields {
-    T3projectdetails = JSON
-    T3projectdetails {
-        dataProcessing {
-            10 = BirdCode\BcSimpleproject\DataProcessing\Headless\T3projectdetailsHeadlessProcessor
-            10 {
-                as = project
-            }
-        }
+    T3projectdetails =< lib.T3projectdetails
+}
+ 
+##############################################
+## Create special page for T3projectdetails ##
+##############################################
+t3project_details < lib.headlessPage
+t3project_details {
+    typeNum = 13890904
+
+    10 {
+        dataProcessing < lib.T3projectdetails.dataProcessing
     }
 }

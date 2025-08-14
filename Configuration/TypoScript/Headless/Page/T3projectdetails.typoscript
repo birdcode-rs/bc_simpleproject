@@ -1,0 +1,9 @@
+lib.T3projectdetails = JSON
+lib.T3projectdetails {
+    dataProcessing {
+        10 = BirdCode\BcSimpleproject\DataProcessing\Headless\T3projectdetailsHeadlessProcessor
+        10 {
+            as = project
+        }
+    }
+}

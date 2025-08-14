@@ -9,8 +9,7 @@
 declare(strict_types=1);
 
 namespace BirdCode\BcSimpleproject\Utility\Headless;
-
-
+ 
 use BirdCode\BcSimpleproject\Event\EnrichFileDataEvent;
 use BirdCode\BcSimpleproject\Event\FileDataAfterCropVariantProcessingEvent;
 use BirdCode\BcSimpleproject\Utility\Headless\File\ProcessingConfiguration;
