@@ -119,7 +119,7 @@ return [
             ]
         ],
         'rootpage' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.rootpage',
             'config' => [
                 'type' => 'group',
@@ -128,6 +128,7 @@ return [
                 'maxitems' => 1,
                 'minitems' => 0,
                 'default' => 0,
+                'required' => true,
             ],
         ],
         'logo' => [
@@ -137,13 +138,15 @@ return [
                 'type' => 'file',
                 'maxitems' => 1,
                 'allowed' => 'common-image-types',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'logodimensions' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions',
-            'l10n_mode' => 'exclude',
-            'config' => [
+             'config' => [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 4,
@@ -171,10 +174,9 @@ return [
             ]
         ],
         'footernote' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.footernote',
-            'l10n_mode' => 'exclude', 
-            'config' => [
+             'config' => [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
@@ -187,9 +189,8 @@ return [
             ]
         ],
         'footercopytext' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.footercopytext',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'input',
                 'size' => 40,
@@ -208,13 +209,15 @@ return [
             'config' => [
                 'type' => 'file',
                 'maxitems' => 1,
-                'allowed' => 'common-image-types'
+                'allowed' => 'common-image-types',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'footerlogodimensions' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions',
-            'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
@@ -228,9 +231,8 @@ return [
             ]
         ],
         'email' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.email',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['email'],
@@ -242,9 +244,8 @@ return [
             ],
         ],
         'emaillabel' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.emaillabel',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'input',
                 'size' => 40,
@@ -258,9 +259,8 @@ return [
             ]
         ],
         'phone' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.phone',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['telephone'],
@@ -269,12 +269,14 @@ return [
                 'eval' => 'trim',
                 'max' => 255,
                 'size' => 40,
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'phonelabel' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.phonelabel',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'input',
                 'size' => 40,
@@ -288,22 +290,23 @@ return [
             ]
         ],
         'address' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.address',
-            'l10n_mode' => 'exclude', 
-            'config' => [
+             'config' => [
                 'type' => 'input',
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => '1234 Street Name, City, State, ZIP',
                 'default' => '',
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'addresslong' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.addresslong',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
@@ -317,9 +320,8 @@ return [
             ]
         ],
         'linkedinurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.linkedinurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -328,12 +330,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'xurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.xurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -342,12 +346,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'facebookurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.facebookurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -356,12 +362,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'instagramurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.instagramurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -370,12 +378,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'tiktokurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.tiktokurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -384,12 +394,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'discordurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.discordurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -398,12 +410,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'youtubeurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.youtubeurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -412,12 +426,14 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'githuburl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.githuburl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'link',
                 'allowedTypes' => ['url'],
@@ -429,9 +445,8 @@ return [
             ],
         ],
         'googlemapurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'text',
                 'cols' => 60,
@@ -444,9 +459,8 @@ return [
             ]
         ],
         'googlemapembededurl' => [
-            'exclude' => false,
+            'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.googlemapembededurl',
-            'l10n_mode' => 'exclude', 
             'config' => [
                 'type' => 'text',
                 'cols' => 60,

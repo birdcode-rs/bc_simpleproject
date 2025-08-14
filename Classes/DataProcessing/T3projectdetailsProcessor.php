@@ -18,6 +18,7 @@ use TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface;
 use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
 use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails;
 use BirdCode\BcSimpleproject\Domain\Repository\T3projectdetailsRepository;
+use BirdCode\BcSimpleproject\Utility\OverlayerUtility;
  
 /**
  * T3projectdetailsProcessor
@@ -30,12 +31,7 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
     protected $defaultOrderings = [
         'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
     ];
-
-    /**
-    * @var string
-    */
-    protected $projectDatabase = 'tx_bcsimpleproject_domain_model_t3projectdetails';
-
+ 
     /**
      * Process data of a record to resolve File objects to the view
      *
@@ -51,32 +47,45 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
         $pageUid = $cObj->getRequest()->getAttribute('routing')->getPageId();
         $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid);
         $rootline = $rootlineUtility->get();
+
+        $context = GeneralUtility::makeInstance(Context::class);
+        $languageAspect = $context->getAspect('language');
+        $currentLanguageId = $languageAspect->getId();
  
         foreach ($rootline as $key => $value) {
-            if ($processedData['project'] = $this->getProjectDetails($value['uid'])) {
+            $project = $this->getProjectDetails($value['uid']);
+ 
+            if (!empty($project) && $project instanceof T3projectdetails) {
+                if ($currentLanguageId > 0) {
+                    $project = GeneralUtility::makeInstance(OverlayerUtility::class)->init($project);
+                }
+                $processedData['project'] = $project;
                 return $processedData;
             }
         }
+
         return $processedData;
     }
-    
+     
     /**
      * Method getProjectDetails
      *
      * @param int $pageId
+     * @param string $fieldName
      *
      * @return ?T3projectdetails
      */
-    protected function getProjectDetails(int $pageId): ?T3projectdetails 
+    protected function getProjectDetails(int $pageId, string $fieldName = 'pid'): ?T3projectdetails 
     {
         /** @var QuerySettingsInterface $querySettings */
         $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
         $querySettings->setRespectStoragePage(false);
+        $querySettings->setRespectSysLanguage(true);
 
         $t3projectRepository = GeneralUtility::makeInstance(T3projectdetailsRepository::class);
         $t3projectRepository->setDefaultQuerySettings($querySettings);
 
-        if (!empty($projects = $t3projectRepository->findBy(['rootpage' => $pageId], $this->defaultOrderings))) {
+        if (!empty($projects = $t3projectRepository->findBy([$fieldName => $pageId], $this->defaultOrderings))) {
             return $projects->getFirst();
         }
     }

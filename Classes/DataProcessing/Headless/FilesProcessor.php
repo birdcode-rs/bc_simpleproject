@@ -60,7 +60,7 @@ class FilesProcessor implements DataProcessorInterface
     /**
     * @var string
     */
-    protected $projectDatabase = 'tx_bcsimpleproject_domain_model_t3projectdetails';
+    protected $projectTable = 'tx_bcsimpleproject_domain_model_t3projectdetails';
 
     /**
      * Process data for a gallery, for instance the CType "textmedia"
@@ -127,7 +127,7 @@ class FilesProcessor implements DataProcessorInterface
                 $relationTable = $this->contentObjectRenderer->stdWrapValue(
                     'table',
                     $referenceConfiguration,
-                    $this->projectDatabase
+                    $this->projectTable
                 );
   
                 if (!empty($relationTable)) {
