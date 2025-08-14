@@ -1,0 +1,13 @@
+
+
+page.10.fields {
+    T3projectdetails = JSON
+    T3projectdetails {
+        dataProcessing {
+            10 = BirdCode\BcSimpleproject\DataProcessing\Headless\T3projectdetailsHeadlessProcessor
+            10 {
+                as = project
+            }
+        }
+    }
+}

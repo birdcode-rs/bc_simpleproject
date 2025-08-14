@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the "bc_simpleproject" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.md file that was distributed with this source code.
+ */
+declare(strict_types=1);
+
 namespace BirdCode\BcSimpleproject\DataProcessing;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
