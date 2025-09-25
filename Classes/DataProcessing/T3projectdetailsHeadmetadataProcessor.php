@@ -10,18 +10,18 @@ declare(strict_types=1);
 
 namespace BirdCode\BcSimpleproject\DataProcessing;
  
-use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails;
+use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails; 
+use BirdCode\BcSimpleproject\Utility\SimpleHelperUtility;
 use BirdCode\BcSimpleproject\Utility\SimpleprojectUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer; 
  
 /**
- * T3projectdetailsProcessor
+ * T3projectdetailsHeadmetadataProcessor
  */
-final class T3projectdetailsProcessor implements DataProcessorInterface
+final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterface
 {   
     /**
      * Process data of a record to resolve File objects to the view
@@ -47,7 +47,10 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
             $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
             if ($project instanceof T3projectdetails) {
-                $processedData['project'] = $project;
+                $response = [];
+                $response['css'] = $project->getProjectembededcss();
+                $response['favicons'] = GeneralUtility::makeInstance(SimpleHelperUtility::class)->generateFavicons($project->getFaviconsX());
+                $processedData['project'] = $response;
                 return $processedData;
             }
         }

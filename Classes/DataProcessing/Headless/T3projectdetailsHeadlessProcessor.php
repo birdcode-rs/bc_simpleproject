@@ -11,28 +11,17 @@ declare(strict_types=1);
 namespace BirdCode\BcSimpleproject\DataProcessing\Headless;
 
 use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails;
-use BirdCode\BcSimpleproject\Domain\Repository\T3projectdetailsRepository;
-use BirdCode\BcSimpleproject\Utility\OverlayerUtility;
-use TYPO3\CMS\Core\Context\Context;
+use BirdCode\BcSimpleproject\Utility\SimpleprojectUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-use TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface;
-use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer; 
  
 /**
  * T3projectdetailsProcessor
  */
 final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
 {   
-    /**
-     * @var array
-     */
-    private array $defaultOrderings = [
-        'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-    ];
-     
     /**
      * Process data of a record to resolve File objects to the view
      *
@@ -51,20 +40,11 @@ final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
         $pageUid = $cObj->getRequest()->getAttribute('routing')->getPageId();
         $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid);
         $rootline = $rootlineUtility->get();
-
-        $context = GeneralUtility::makeInstance(Context::class);
-        $languageAspect = $context->getAspect('language');
-        $currentLanguageId = $languageAspect->getId();
-        
+ 
         foreach ($rootline as $key => $value) {
-            $project = $this->getProjectDetails($value['uid']);
+            $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
             if ($project instanceof T3projectdetails) {
-
-                if ($currentLanguageId > 0) {
-                    $project = GeneralUtility::makeInstance(OverlayerUtility::class)->init($project);
-                }
-                
                 $data = [
                     'uid' => $project->getUid(),
                     'rootpage' => $project->getRootpage(),
@@ -91,6 +71,7 @@ final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
                     'githuburl' => $project->getGithuburl(),
                     'googlemapurl' => $project->getGooglemapurl(),
                     'googlemapembededurl' => $project->getGooglemapembededurl(),
+                    'projectembededcss' => $project->getProjectembededcss(),
                 ];
     
                 if (!empty($project->getFirstLogo())) {
@@ -118,31 +99,7 @@ final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
         }
 
         return $processedData;
-    }
- 
-    /**
-     * Method getProjectDetails
-     *
-     * @param int $pageId
-     * @param string $fieldName
-     *
-     * @return ?T3projectdetails
-     */
-    protected function getProjectDetails(int $pageId, string $fieldName = 'pid'): ?T3projectdetails 
-    {
-        /** @var QuerySettingsInterface $querySettings */
-        $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
-        $querySettings->setRespectStoragePage(false);
-        $querySettings->setRespectSysLanguage(true);
-
-        $repository = GeneralUtility::makeInstance(T3projectdetailsRepository::class);
-        $repository->setDefaultQuerySettings($querySettings);
-
-        if (!empty($projects = $repository->findBy([$fieldName => $pageId], $this->defaultOrderings))) {
-            return $projects->getFirst();
-        }
-    }
- 
+    } 
     /**
      * Method fetchProjectAssets
      *

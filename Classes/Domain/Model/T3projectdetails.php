@@ -143,7 +143,17 @@ class T3projectdetails extends AbstractEntity
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
     protected $footerlogo;
- 
+    
+    /**
+     * @var string
+     */
+    protected $projectembededcss = '';
+
+    /**
+     * @var string
+     */
+    protected $favicons = '';
+  
     public function __construct()
     {
         $this->logo = new ObjectStorage(); 
@@ -789,4 +799,61 @@ class T3projectdetails extends AbstractEntity
     {
         return $this->googlemapembededurl;
     }
+ 
+    /**
+     * Method setGooglemapembededurl
+     *
+     * @param string $googlemapembededurl
+     *
+     * @return void
+     */
+    public function setProjectembededcss(string $projectembededcss): void
+    {
+        $this->projectembededcss = $projectembededcss;
+    }
+    
+    /**
+     * Method getGooglemapembededurl
+     *
+     * @return string
+     */
+    public function getProjectembededcss(): string
+    {
+        return $this->projectembededcss;
+    }
+
+    /**
+     * Method setFavicons
+     *
+     * @param string $favicons
+     *
+     * @return void
+     */
+    public function setFavicons(string $favicons): void
+    {
+        $this->favicons = $favicons;
+    }
+    
+    /**
+     * Method getFavicons
+     *
+     * @return string
+     */
+    public function getFavicons(): string
+    {
+        return $this->favicons;
+    }
+ 
+    /**
+     * Method getFaviconsX
+     *
+     * @return array
+     */
+    public function getFaviconsX(): array
+    {
+        return json_decode($this->favicons, true) ?: [];
+    }
+
+
+    
 }
