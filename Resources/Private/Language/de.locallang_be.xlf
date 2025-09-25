@@ -19,16 +19,24 @@
                 <target>Logo Titel</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions">
-                <source>Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
-                <target>Logo-Abmessungen [fügen Sie JSON-Code wie {"width":"500","height":"300"} ein]</target>
+                <source>Logo Dimesions</source>
+                <target>Logo-Abmessungen</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions.description">
+                <source>Add json code like {"width":"500","height":"300"}</source>
+                <target>Fügen Sie JSON-Code wie {"width":"500","height":"300"} ein</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogo">
                 <source>Footer Logo</source>
                 <target>Footer-Logo</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions">
-                <source>Footer Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
-                <target>Footer-Logo-Abmessungen [fügen Sie JSON-Code wie {"width":"500","height":"300"} ein]</target>
+                <source>Footer Logo Dimesions</source>
+                <target>Footer-Logo-Abmessungen</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions.description">
+                <source>Add json code like {"width":"500","height":"300"}</source>
+                <target>Fügen Sie JSON-Code wie {"width":"500","height":"300"} ein</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footernote">
                 <source>Footer Note</source>
@@ -102,10 +110,18 @@
                 <source>Google Map Iframe embeded URL</source>
                 <target>Google Maps Iframe eingebettete URL</target>
             </trans-unit> 
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
+                <source>Custom CSS styles embedded for this project</source>
+                <target>Benutzerdefinierte CSS-Stile für dieses Projekt</target>
+            </trans-unit>
             <trans-unit id="tt_content.embededcss">
-                <source>Add CSS: each new CSS line should start with ###UID### in order to apply the style to the current element</source>
-                <target>CSS hinzufügen: Jede neue CSS-Zeile sollte mit ###UID### beginnen, um den Stil auf das aktuelle Element anzuwenden.</target>
-            </trans-unit>        
+                <source>Embedded CSS</source>
+                <target>Eingebettetes CSS</target>
+            </trans-unit>
+            <trans-unit id="tt_content.embededcss.description">
+                <source>Prefix each CSS rule with ###UID### to apply it only to this element</source>
+                <target>Jede CSS-Regel mit ###UID### beginnen, um sie nur auf dieses Element anzuwenden</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

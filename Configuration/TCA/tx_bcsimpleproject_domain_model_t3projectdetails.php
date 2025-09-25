@@ -21,7 +21,7 @@ return [
             'endtime' => 'endtime',
             'fe_group' => 'fe_group',
         ],
-        'searchFields' => 'rootpage,logotitle,footernote,footercopytext,emaillabel,phonelabel,address,addresslong',
+        'searchFields' => 'rootpage,logotitle,footernote,footercopytext,emaillabel,phonelabel,address,addresslong,projectembededcss',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
@@ -426,7 +426,7 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
-                   'behaviour' => [
+                'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
             ],
@@ -442,6 +442,9 @@ return [
                 'size' => 40,
                 'eval' => 'trim',
                 'max' => 255,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],                
             ],
         ],
         'googlemapurl' => [
@@ -472,17 +475,50 @@ return [
                 ],
             ]
         ],
+        'projectembededcss' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss',
+            'config' => [
+                'type' => 'text',
+                'cols' => 140,
+                'rows' => 150,
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
+            ],
+        ],
+        'favicons' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.favicons',
+            'description' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.favicons.description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 140,
+                'rows' => 150,
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
+            ],
+        ],
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;paletteCore,--palette--;;project,--palette--;;google,--palette--;;social,--palette--;;
-                LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-                --palette--;;language,--div--;
-                LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-                --palette--;;paletteHidden,
-                --palette--;;paletteAcces, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-                --palette--;;paletteLanguage,'
-        ]
+            'showitem' => '
+                --palette--;;paletteCore,
+                --palette--;;project,
+                --palette--;;google,
+                --palette--;;social,
+                --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project,--palette--;;paletteProject,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                    --palette--;;paletteLanguage,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;paletteHidden,
+                    --palette--;;paletteAccess;
+            ',
+        ],
     ],
     'palettes' => [
         'project' => [
@@ -500,6 +536,10 @@ return [
         ],
         'paletteHidden' => [
             'showitem' => 'hidden',
+        ],
+        'paletteProject' => [
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project',
+            'showitem' => 'projectembededcss,--linebreak--,favicons',
         ],
         'paletteAccess' => [
             'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access',

@@ -27,6 +27,9 @@ CREATE TABLE tx_bcsimpleproject_domain_model_t3projectdetails (
     discordurl varchar(255) DEFAULT '' NOT NULL,
     youtubeurl varchar(255) DEFAULT '' NOT NULL,
     githuburl varchar(255) DEFAULT '' NOT NULL,
+
+    projectembededcss text,
+    favicons text,
     PRIMARY KEY (uid)
 );
 

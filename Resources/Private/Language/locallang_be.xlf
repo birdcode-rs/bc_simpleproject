@@ -6,6 +6,9 @@
             <authorEmail>bird.dev@birdcode.in.rs</authorEmail>
         </header>
         <body>
+            <trans-unit id="palette.project">
+                <source>Project specific configuration</source>
+            </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
                 <source>ROOT page ID</source>
             </trans-unit>
@@ -16,13 +19,19 @@
                 <source>Logo Title</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions">
-                <source>Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
+                <source>Logo Dimesions</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions.description">
+                <source>Add json code like {"width":"500","height":"300"}</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogo">
                 <source>Footer Logo</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions">
-                <source>Footer Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
+                <source>Footer Logo Dimesions</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions.description">
+                <source>Add json code like {"width":"500","height":"300"}</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footernote">
                 <source>Footer Note</source>
@@ -78,9 +87,42 @@
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapembededurl">
                 <source>Google Map Iframe embeded URL</source>
             </trans-unit>    
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
+                <source>Custom CSS styles embedded for this project</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.favicons">
+                <source>Favicons</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.favicons.description">
+                <source><![CDATA[ 
+      [
+        {"rel": "icon","type": "image/png","sizes": "16x16","href": "/favicon-16x16.png"},
+        {"rel": "icon","type": "image/png","sizes": "32x32","href": "/favicon-32x32.png"},
+        {"rel": "icon","type": "image/png","sizes": "48x48","href": "/favicon-48x48.png"},
+        {"rel": "icon","type": "image/png","sizes": "64x64","href": "/favicon-64x64.png"},
+        {"rel": "shortcut icon","type": "image/x-icon","href": "/favicon.ico"},
+        {"rel": "apple-touch-icon","sizes": "57x57","href": "/apple-touch-icon-57x57.png"},
+        {"rel": "apple-touch-icon","sizes": "60x60","href": "/apple-touch-icon-60x60.png"},
+        {"rel": "apple-touch-icon","sizes": "72x72","href": "/apple-touch-icon-72x72.png"},
+        {"rel": "apple-touch-icon","sizes": "76x76","href": "/apple-touch-icon-76x76.png"},
+        {"rel": "apple-touch-icon","sizes": "114x114","href": "/apple-touch-icon-114x114.png"},
+        {"rel": "apple-touch-icon","sizes": "120x120","href": "/apple-touch-icon-120x120.png"},
+        {"rel": "apple-touch-icon","sizes": "144x144","href": "/apple-touch-icon-144x144.png"},
+        {"rel": "apple-touch-icon","sizes": "152x152","href": "/apple-touch-icon-152x152.png"},
+        {"rel": "apple-touch-icon","sizes": "180x180","href": "/apple-touch-icon-180x180.png"},
+        {"rel": "android-chrome","sizes": "192x192","href": "/android-chrome-192x192.png"},
+        {"rel": "android-chrome","sizes": "512x512","href": "/android-chrome-512x512.png"},
+        {"rel": "manifest","href": "/site.webmanifest"}
+      ]
+
+            ]]></source>
+            </trans-unit>
             <trans-unit id="tt_content.embededcss">
-                <source>Add CSS: each new CSS line should start with ###UID### in order to apply the style to the current element</source>
-            </trans-unit>    
+                <source>Embedded CSS</source>
+            </trans-unit>
+            <trans-unit id="tt_content.embededcss.description">
+                <source>Prefix each CSS rule with ###UID### to apply it only to this element</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

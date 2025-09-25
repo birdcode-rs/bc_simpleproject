@@ -1,9 +1,18 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:bc_simpleproject/Configuration/TypoScript/Helper/headTags.typoscript'
+
 ###############################################################
 #### Include T3projectdetailsProcessor | variable: project ####
 ###############################################################
 
 page.10.dataProcessing.1389 = BirdCode\BcSimpleproject\DataProcessing\T3projectdetailsProcessor
- 
+
+#####################################
+#### Support rendering head data ####
+#####################################
+page.headerData.1389 =< lib.headTags
 
 ########################################
 #### Support rendering embedded css ####
@@ -33,3 +42,4 @@ page.headerData {
     }
 }
 
+ 
