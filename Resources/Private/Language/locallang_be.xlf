@@ -76,10 +76,13 @@
                 <source>Discord URL</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.youtubeurl">
-                <source>You Tube URL</source>
+                <source>YouTube URL</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.githuburl">
                 <source>GitHub URL</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.snapchaturl">
+                <source>Snapchat URL</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl">
                 <source>Google map URL</source>
@@ -122,6 +125,33 @@
             </trans-unit>
             <trans-unit id="tt_content.embededcss.description">
                 <source>Prefix each CSS rule with ###UID### to apply it only to this element</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader">
+                <source>Preheader</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_class">
+                <source>Preheader Class</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout">
+                <source>Preheader Type</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_position">
+                <source>Preheader Alignment</source>
+            </trans-unit> 
+            <trans-unit id="tt_content.subheader_position">
+                <source>Subheader Alignment</source>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_layout">
+                <source>Subheader Type</source>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_class">
+                <source>Subheader Class</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_class">
+                <source>Class</source>
+            </trans-unit>
+            <trans-unit id="pages.exclude_from_sitemap">
+                <source>Exclude from Sitemap</source>
             </trans-unit>
         </body>
     </file>

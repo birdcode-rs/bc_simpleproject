@@ -1,7 +1,7 @@
 ###################
 ## Include page ##
 ###################
-@import "EXT:bc_simpleproject/Configuration/TypoScript/Headless/Page/*.typoscript"
+@import "./Page/*.typoscript"
 
 ###################################################
 ## Add T3projectdetails as parameter to page json ##

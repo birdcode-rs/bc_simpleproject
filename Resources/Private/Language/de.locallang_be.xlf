@@ -95,7 +95,7 @@
                 <target>Discord-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.youtubeurl">
-                <source>You Tube URL</source>
+                <source>YouTube URL</source>
                 <target>YouTube-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.githuburl">
@@ -105,6 +105,10 @@
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl">
                 <source>Google map URL</source>
                 <target>Google-Maps-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.snapchaturl">
+                <source>Snapchat URL</source>
+                <target>Snapchat-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapembededurl">
                 <source>Google Map Iframe embeded URL</source>
@@ -122,6 +126,43 @@
                 <source>Prefix each CSS rule with ###UID### to apply it only to this element</source>
                 <target>Jede CSS-Regel mit ###UID### beginnen, um sie nur auf dieses Element anzuwenden</target>
             </trans-unit>
+            <trans-unit id="tt_content.preheader">
+                <source>Preheader</source>
+                <target>Preheader</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_class">
+                <source>Preheader Class</source>
+                <target>Preheader-Klasse</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout">
+                <source>Preheader Type</source>
+                <target>Preheader-Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_position">
+                <source>Preheader Alignment</source>
+                <target>Ausrichtung des Preheaders</target>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_position">
+                <source>Subheader Alignment</source>
+                <target>Ausrichtung des Untertitels</target>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_layout">
+                <source>Subheader Type</source>
+                <target>Untertitel-Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_class">
+                <source>Subheader Class</source>
+                <target>Untertitel-Klasse</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_class">
+                <source>Class</source>
+                <target>Klasse</target>
+            </trans-unit>
+            <trans-unit id="pages.exclude_from_sitemap">
+                <source>Exclude from Sitemap</source>
+                <target>Von der Sitemap ausschließen</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

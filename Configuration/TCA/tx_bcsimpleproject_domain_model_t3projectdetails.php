@@ -447,6 +447,22 @@ return [
                 ],                
             ],
         ],
+        'snapchaturl' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.snapchaturl',
+            'config' => [
+                'type' => 'link',
+                'allowedTypes' => ['url'],
+                'placeholder' => 'https://www.snapchat.com/add/YOUR_USERNAME',
+                'default' => '',
+                'size' => 40,
+                'eval' => 'trim',
+                'max' => 255,
+                   'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
+            ],
+        ],        
         'googlemapurl' => [
             'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl',

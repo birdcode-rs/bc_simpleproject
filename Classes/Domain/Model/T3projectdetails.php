@@ -114,6 +114,11 @@ class T3projectdetails extends AbstractEntity
      */
     protected $githuburl = '';
  
+     /**
+     * @var string
+     */
+    protected $snapchaturl = '';    
+ 
     /**
      * @var string
      */
@@ -576,6 +581,28 @@ class T3projectdetails extends AbstractEntity
     public function getGithuburl(): string
     {
         return $this->githuburl;
+    }
+
+    /**
+     * Method setSnapchaturl
+     *
+     * @param string $snapchaturl
+     *
+     * @return void
+     */
+    public function setSnapchaturl(string $snapchaturl): void
+    {
+        $this->snapchaturl = $snapchaturl;
+    }
+    
+    /**
+     * Method getSnapchaturl
+     *
+     * @return string
+     */
+    public function getSnapchaturl(): string
+    {
+        return $this->snapchaturl;
     }
  
     /**

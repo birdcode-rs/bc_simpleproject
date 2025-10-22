@@ -1,8 +1,9 @@
 ######################
 #### DEPENDENCIES ####
-######################
-@import 'EXT:bc_simpleproject/Configuration/TypoScript/Helper/headTags.typoscript'
-
+###################### 
+@import './Helper/ttContent.typoscript'
+@import './Helper/headTags.typoscript'
+ 
 ###############################################################
 #### Include T3projectdetailsProcessor | variable: project ####
 ###############################################################
@@ -40,6 +41,37 @@ page.headerData {
             4.if.isTrue.data = field:embededcss
         }
     }
-}
 
+    1989.10 = CONTENT
+    1989.10 {
+        table = tt_content
+        select.where = hidden=0 and CType='shortcut'
+        select.pidInList = this
+        select.orderBy = sorting
+
+        renderObj = COA
+        renderObj {
+
+            5 = TEXT
+            5.field = records
+            5.split {
+                token = ,
+                cObjNum = 1
+                1 {
+                    10 = RECORDS
+                    10.tables = tt_content
+                    10.source.current = 1
+                    10.conf.tt_content = TEXT
+                    10.conf.tt_content.stdWrap.field = embededcss
+                    10.conf.tt_content.stdWrap.replacement.10 {
+                        search = ###UID###
+                        replace.cObject = TEXT
+                        replace.cObject.value = #c{field:uid}
+                        replace.cObject.insertData = 1
+                    }
+                }
+            }    
+        }
+    }
+}
  

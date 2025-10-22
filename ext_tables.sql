@@ -27,13 +27,27 @@ CREATE TABLE tx_bcsimpleproject_domain_model_t3projectdetails (
     discordurl varchar(255) DEFAULT '' NOT NULL,
     youtubeurl varchar(255) DEFAULT '' NOT NULL,
     githuburl varchar(255) DEFAULT '' NOT NULL,
+    snapchaturl varchar(255) DEFAULT '' NOT NULL,
 
     projectembededcss text,
     favicons text,
     PRIMARY KEY (uid)
 );
-
+ 
 #
-# Table structure for table 'tt_content'
+# Extend Table structure for table 'pages'
+#
+ALTER TABLE pages ADD exclude_from_sitemap tinyint(4) DEFAULT '0' NOT NULL;
+ 
+#
+# Extend Table structure for table 'tt_content'
 #
 ALTER TABLE tt_content ADD embededcss TEXT;
+ALTER TABLE tt_content ADD preheader varchar(255) DEFAULT '' NOT NULL;
+ALTER TABLE tt_content ADD preheader_layout int(11) DEFAULT '0' NOT NULL;
+ALTER TABLE tt_content ADD preheader_class varchar(255) DEFAULT '' NOT NULL;
+ALTER TABLE tt_content ADD preheader_position int(11) DEFAULT '0' NOT NULL;
+ALTER TABLE tt_content ADD subheader_layout int(11) DEFAULT '0' NOT NULL;
+ALTER TABLE tt_content ADD subheader_position int(11) DEFAULT '0' NOT NULL;
+ALTER TABLE tt_content ADD subheader_class varchar(255) DEFAULT '' NOT NULL;
+ALTER TABLE tt_content ADD header_class varchar(255) DEFAULT '' NOT NULL;
