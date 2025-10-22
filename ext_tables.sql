@@ -28,6 +28,7 @@ CREATE TABLE tx_bcsimpleproject_domain_model_t3projectdetails (
     youtubeurl varchar(255) DEFAULT '' NOT NULL,
     githuburl varchar(255) DEFAULT '' NOT NULL,
     snapchaturl varchar(255) DEFAULT '' NOT NULL,
+    xingurl varchar(255) DEFAULT '' NOT NULL,
 
     projectembededcss text,
     favicons text,

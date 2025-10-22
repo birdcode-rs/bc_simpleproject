@@ -84,6 +84,9 @@
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.snapchaturl">
                 <source>Snapchat URL</source>
             </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.xingurl">
+                <source>XING URL</source>
+            </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapurl">
                 <source>Google map URL</source>
             </trans-unit>
@@ -134,6 +137,18 @@
             </trans-unit>
             <trans-unit id="tt_content.preheader_layout">
                 <source>Preheader Type</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.1">
+                <source>Layout tag:span</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.2">
+                <source>Layout tag:strong</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.3">
+                <source>Layout tag:p</source>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.3">
+                <source>Layout tag:div</source>
             </trans-unit>
             <trans-unit id="tt_content.preheader_position">
                 <source>Preheader Alignment</source>

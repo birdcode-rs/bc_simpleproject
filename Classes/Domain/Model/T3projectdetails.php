@@ -114,10 +114,15 @@ class T3projectdetails extends AbstractEntity
      */
     protected $githuburl = '';
  
-     /**
+    /**
      * @var string
      */
     protected $snapchaturl = '';    
+
+    /**
+     * @var string
+     */
+    protected $xingurl = '';
  
     /**
      * @var string
@@ -606,6 +611,28 @@ class T3projectdetails extends AbstractEntity
     }
  
     /**
+     * Method setXingurl
+     *
+     * @param string $xingurl
+     *
+     * @return void
+     */
+    public function setXingurl(string $xingurl): void
+    {
+        $this->xingurl = $xingurl;
+    }
+    
+    /**
+     * Method getXingurl
+     *
+     * @return string
+     */
+    public function getXingurl(): string
+    {
+        return $this->xingurl;
+    }
+ 
+    /**
      * Method setLogodimensions
      *
      * @param string $logodimensions
@@ -880,7 +907,4 @@ class T3projectdetails extends AbstractEntity
     {
         return json_decode($this->favicons, true) ?: [];
     }
-
-
-    
 }

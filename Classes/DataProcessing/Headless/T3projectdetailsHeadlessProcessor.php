@@ -69,6 +69,8 @@ final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
                     'discordurl' => $project->getDiscordurl(),
                     'youtubeurl' => $project->getYoutubeurl(),
                     'githuburl' => $project->getGithuburl(),
+                    'snapchaturl' => $project->getSnapchaturl(),
+                    'xingurl' => $project->getXingurl(),
                     'googlemapurl' => $project->getGooglemapurl(),
                     'googlemapembededurl' => $project->getGooglemapembededurl(),
                     'projectembededcss' => $project->getProjectembededcss(),

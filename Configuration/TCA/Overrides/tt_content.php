@@ -73,12 +73,20 @@ $newFields = [
                     'value' => '0',
                 ],
                 [
-                    'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.1',
+                    'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tt_content.preheader_layout.I.1',
                     'value' => '1',
                 ],
                 [
-                    'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.2',
+                    'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tt_content.preheader_layout.I.2',
                     'value' => '2',
+                ],
+                [
+                    'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tt_content.preheader_layout.I.3',
+                    'value' => '3',
+                ],
+                [
+                    'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tt_content.preheader_layout.I.4',
+                    'value' => '4',
                 ],
                 [
                     'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6',

@@ -106,6 +106,10 @@
                 <source>Google map URL</source>
                 <target>Google-Maps-URL</target>
             </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.xingurl">
+                <source>XING URL</source>
+                <target>XING-URL</target>
+            </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.snapchaturl">
                 <source>Snapchat URL</source>
                 <target>Snapchat-URL</target>
@@ -137,6 +141,22 @@
             <trans-unit id="tt_content.preheader_layout">
                 <source>Preheader Type</source>
                 <target>Preheader-Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.1">
+                <source>Layout tag:span</source>
+                <target>Layout-Tag:span</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.2">
+                <source>Layout tag:strong</source>
+                <target>Layout-Tag:strong</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.3">
+                <source>Layout tag:p</source>
+                <target>Layout-Tag:p</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.3">
+                <source>Layout tag:div</source>
+                <target>Layout-Tag:div</target>
             </trans-unit>
             <trans-unit id="tt_content.preheader_position">
                 <source>Preheader Alignment</source>
