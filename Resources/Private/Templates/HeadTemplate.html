@@ -1,2 +1,11 @@
 <f:if condition="{project.css}"><style>{project.css->f:format.raw()}</style></f:if>
 <f:if condition="{project.favicons}">{project.favicons->f:format.raw()}</f:if>
+<f:if condition="{project.googleanalyticsid}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id={project.googleanalyticsid->f:format.raw()}"></script>
+    <script type="text/plain" data-cookie-consent="strictly-necessary">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{project.googleanalyticsid->f:format.raw()}');
+    </script>
+</f:if>

@@ -1,0 +1,23 @@
+###################
+## Include page ##
+###################
+@import "./Page/*.typoscript"
+
+###################################################
+## Add T3projectdetails as parameter to page json ##
+###################################################
+page.10.fields {
+    t3projectdetails =< lib.T3projectdetails
+}
+ 
+##############################################
+## Create special page for T3projectdetails ##
+##############################################
+t3project_details < lib.headlessPage
+t3project_details {
+    typeNum = 13890904
+
+    10 {
+        dataProcessing < lib.T3projectdetails.dataProcessing
+    }
+}

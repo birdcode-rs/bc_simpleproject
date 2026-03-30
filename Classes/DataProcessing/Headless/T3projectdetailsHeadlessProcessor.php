@@ -87,7 +87,7 @@ final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
                     'workingdataeaster' => $project->getWorkingdataeaster(),
                     'googleanalyticsid' => $project->getGoogleanalyticsid(),
                     'googleconfirmationid' => $project->getGoogleconfirmationid(),
-                    'favicons' => $project->getFavicons(),
+                    'favicons' => $project->getFavicons()
                 ];
     
                 if (!empty($project->getFirstLogo())) {

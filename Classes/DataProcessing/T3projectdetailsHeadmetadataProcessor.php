@@ -37,8 +37,7 @@ final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterf
         array $contentObjectConfiguration, 
         array $processorConfiguration, 
         array $processedData
-    ): array {       
-        /* $getSite = $cObj->getRequest()->getAttribute('site'); $getRootPageId = $getSite->getRootPageId(); */
+    ): array {
         $pageUid = $cObj->getRequest()->getAttribute('routing')->getPageId();
         $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid);
         $rootline = $rootlineUtility->get();

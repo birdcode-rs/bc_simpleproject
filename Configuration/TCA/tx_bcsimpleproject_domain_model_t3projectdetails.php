@@ -699,7 +699,7 @@ return [
             'showitem' => 'email, emaillabel, --linebreak--, phone, phonelabel, --linebreak--, address, addresslong'
         ],
         'palette_social_main' => [
-            'showitem' => 'facebookurl, --linebreak--, instagramurl, --linebreak--, linkedinurl, --linebreak--, xingurl, --linebreak--, youtubeurl'
+            'showitem' => 'xurl, --linebreak--, facebookurl, --linebreak--, instagramurl, --linebreak--, linkedinurl, --linebreak--, xingurl, --linebreak--, youtubeurl'
         ],
         'palette_social_extra' => [
             'showitem' => 'tiktokurl, --linebreak--, discordurl, --linebreak--, githuburl, --linebreak--, snapchaturl'

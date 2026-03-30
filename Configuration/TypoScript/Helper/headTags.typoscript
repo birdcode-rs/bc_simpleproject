@@ -1,0 +1,8 @@
+lib.headTags = FLUIDTEMPLATE
+lib.headTags {
+    format = html
+    file = EXT:bc_simpleproject/Resources/Private/Templates/HeadTemplate.html
+    dataProcessing {
+        10 = BirdCode\BcSimpleproject\DataProcessing\T3projectdetailsHeadmetadataProcessor
+    }
+}

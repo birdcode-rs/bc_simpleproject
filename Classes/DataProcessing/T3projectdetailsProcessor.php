@@ -16,7 +16,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-use TYPO3\CMS\Core\Page\PageRenderer;
  
 /**
  * T3projectdetailsProcessor
@@ -37,8 +36,7 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
         array $contentObjectConfiguration,
         array $processorConfiguration,
         array $processedData
-    ): array {       
-        /* $getSite = $cObj->getRequest()->getAttribute('site'); $getRootPageId = $getSite->getRootPageId(); */
+    ): array {
         $pageUid = $cObj->getRequest()->getAttribute('routing')->getPageId();
         $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid);
         $rootline = $rootlineUtility->get();
