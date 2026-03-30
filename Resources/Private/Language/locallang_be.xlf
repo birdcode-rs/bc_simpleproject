@@ -9,8 +9,26 @@
             <trans-unit id="palette.project">
                 <source>Project specific configuration</source>
             </trans-unit>
-            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
-                <source>ROOT page ID</source>
+            <trans-unit id="palette.project.main" resname="palette.project.main">
+                <source>Main Configuration</source>
+            </trans-unit>
+            <trans-unit id="palette.project.branding" resname="palette.project.branding">
+                <source>Identity &amp; Logos</source>
+            </trans-unit>
+            <trans-unit id="palette.project.contact" resname="palette.project.contact">
+                <source>Core Contact Info</source>
+            </trans-unit>
+            <trans-unit id="palette.project.social" resname="palette.project.social">
+                <source>Social Media</source>
+            </trans-unit>
+            <trans-unit id="palette.project.technical" resname="palette.project.technical">
+                <source>Technical &amp; SEO</source>
+            </trans-unit>
+            <trans-unit id="palette.project.holidays" resname="palette.project.holidays">
+                <source>Holidays</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage" resname="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
+                <source>Root Page ID (Entry Point)</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logo">
                 <source>Logo</source>
@@ -93,6 +111,9 @@
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapembededurl">
                 <source>Google Map Iframe embeded URL</source>
             </trans-unit>    
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectbodyclass">
+                <source>Body class</source>
+            </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
                 <source>Custom CSS styles embedded for this project</source>
             </trans-unit>
@@ -100,8 +121,7 @@
                 <source>Favicons</source>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.favicons.description">
-                <source><![CDATA[ 
-      [
+                <source><![CDATA[[
         {"rel": "icon","type": "image/png","sizes": "16x16","href": "/favicon-16x16.png"},
         {"rel": "icon","type": "image/png","sizes": "32x32","href": "/favicon-32x32.png"},
         {"rel": "icon","type": "image/png","sizes": "48x48","href": "/favicon-48x48.png"},
@@ -119,9 +139,7 @@
         {"rel": "android-chrome","sizes": "192x192","href": "/android-chrome-192x192.png"},
         {"rel": "android-chrome","sizes": "512x512","href": "/android-chrome-512x512.png"},
         {"rel": "manifest","href": "/site.webmanifest"}
-      ]
-
-            ]]></source>
+            ]]]></source>
             </trans-unit>
             <trans-unit id="tt_content.embededcss">
                 <source>Embedded CSS</source>
@@ -147,7 +165,7 @@
             <trans-unit id="tt_content.preheader_layout.I.3">
                 <source>Layout tag:p</source>
             </trans-unit>
-            <trans-unit id="tt_content.preheader_layout.I.3">
+            <trans-unit id="tt_content.preheader_layout.I.4">
                 <source>Layout tag:div</source>
             </trans-unit>
             <trans-unit id="tt_content.preheader_position">
@@ -168,6 +186,57 @@
             <trans-unit id="pages.exclude_from_sitemap">
                 <source>Exclude from Sitemap</source>
             </trans-unit>
+            <trans-unit id="palette.project.general" resname="palette.project.general">
+				<source>General Settings</source>
+			</trans-unit>
+			<trans-unit id="palette.project.working_hours" resname="palette.project.working_hours">
+				<source>Working Hours</source>
+			</trans-unit>
+			<trans-unit id="palette.project.holidays" resname="palette.project.holidays">
+				<source>Holiday Working Hours</source>
+			</trans-unit>
+			<trans-unit id="palette.project.google" resname="palette.project.google">
+				<source>Google Configuration</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workinginstructions" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workinginstructions">
+				<source>Working Instructions</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday">
+				<source>Monday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday">
+				<source>Tuesday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday">
+				<source>Wednesday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday">
+				<source>Thursday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday">
+				<source>Friday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday">
+				<source>Saturday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday">
+				<source>Sunday</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear">
+				<source>New Year's Day</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas">
+				<source>Christmas</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster">
+				<source>Easter</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid">
+				<source>Google Analytics Tracking ID</source>
+			</trans-unit>
+			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid">
+				<source>Google Site Verification ID</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

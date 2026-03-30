@@ -6,9 +6,37 @@
             <authorEmail>bird.dev@birdcode.in.rs</authorEmail>
         </header>
         <body>
-            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
-                <source>ROOT page ID</source>
-                <target>ROOT-Seiten-ID</target>
+            <trans-unit id="palette.project">
+                <source>Project specific configuration</source>
+                <target>Projektspezifische Konfiguration</target>
+            </trans-unit>
+            <trans-unit id="palette.project.main" resname="palette.project.main">
+                <source>Main Configuration</source>
+                <target>Hauptkonfiguration</target>
+            </trans-unit>
+            <trans-unit id="palette.project.branding" resname="palette.project.branding">
+                <source>Identity &amp; Logos</source>
+                <target>Identität &amp; Logos</target>
+            </trans-unit>
+            <trans-unit id="palette.project.contact" resname="palette.project.contact">
+                <source>Core Contact Info</source>
+                <target>Zentrale Kontaktinformationen</target>
+            </trans-unit>
+            <trans-unit id="palette.project.social" resname="palette.project.social">
+                <source>Social Media</source>
+                <target>Social Media</target>
+            </trans-unit>
+            <trans-unit id="palette.project.technical" resname="palette.project.technical">
+                <source>Technical &amp; SEO</source>
+                <target>Technik &amp; SEO</target>
+            </trans-unit>
+            <trans-unit id="palette.project.holidays" resname="palette.project.holidays">
+                <source>Holidays</source>
+                <target>Feiertage</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage" resname="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
+                <source>Root Page ID (Entry Point)</source>
+                <target>Root-Seiten-ID (Einstiegspunkt)</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logo">
                 <source>Logo</source>
@@ -119,6 +147,10 @@
                 <target>Google Maps Iframe eingebettete URL</target>
             </trans-unit> 
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
+                <source>Body class</source>
+                <target>Body class</target>
+            </trans-unit>            
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
                 <source>Custom CSS styles embedded for this project</source>
                 <target>Benutzerdefinierte CSS-Stile für dieses Projekt</target>
             </trans-unit>
@@ -129,6 +161,54 @@
             <trans-unit id="tt_content.embededcss.description">
                 <source>Prefix each CSS rule with ###UID### to apply it only to this element</source>
                 <target>Jede CSS-Regel mit ###UID### beginnen, um sie nur auf dieses Element anzuwenden</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday">
+                <source>Monday</source>
+                <target>Montag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday">
+                <source>Tuesday</source>
+                <target>Dienstag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday">
+                <source>Wednesday</source>
+                <target>Mittwoch</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday">
+                <source>Thursday</source>
+                <target>Donnerstag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday">
+                <source>Friday</source>
+                <target>Freitag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday">
+                <source>Saturday</source>
+                <target>Samstag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday">
+                <source>Sunday</source>
+                <target>Sonntag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear">
+                <source>New Year's Day</source>
+                <target>Neujahr</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas">
+                <source>Christmas</source>
+                <target>Weihnachten</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster">
+                <source>Easter</source>
+                <target>Ostern</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid">
+                <source>Google Analytics Tracking ID</source>
+                <target>Google Analytics Tracking-ID</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid">
+                <source>Google Site Verification ID</source>
+                <target>Google Website-Bestätigungs-ID</target>
             </trans-unit>
             <trans-unit id="tt_content.preheader">
                 <source>Preheader</source>
@@ -154,7 +234,7 @@
                 <source>Layout tag:p</source>
                 <target>Layout-Tag:p</target>
             </trans-unit>
-            <trans-unit id="tt_content.preheader_layout.I.3">
+            <trans-unit id="tt_content.preheader_layout.I.4">
                 <source>Layout tag:div</source>
                 <target>Layout-Tag:div</target>
             </trans-unit>
@@ -182,7 +262,6 @@
                 <source>Exclude from Sitemap</source>
                 <target>Von der Sitemap ausschließen</target>
             </trans-unit>
-
         </body>
     </file>
 </xliff>

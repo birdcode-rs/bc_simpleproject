@@ -16,7 +16,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-
+use TYPO3\CMS\Core\Page\PageRenderer;
  
 /**
  * T3projectdetailsProcessor
@@ -33,23 +33,23 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
      * @return array the processed data as key/value store
      */
     public function process(
-        ContentObjectRenderer $cObj, 
-        array $contentObjectConfiguration, 
-        array $processorConfiguration, 
+        ContentObjectRenderer $cObj,
+        array $contentObjectConfiguration,
+        array $processorConfiguration,
         array $processedData
     ): array {       
         /* $getSite = $cObj->getRequest()->getAttribute('site'); $getRootPageId = $getSite->getRootPageId(); */
         $pageUid = $cObj->getRequest()->getAttribute('routing')->getPageId();
         $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid);
         $rootline = $rootlineUtility->get();
- 
+
         foreach ($rootline as $key => $value) {
             $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
-            if ($project instanceof T3projectdetails) {
+            if ($project instanceof T3projectdetails) { 
                 $processedData['project'] = $project;
                 return $processedData;
-            }
+            }   
         }
 
         return $processedData;

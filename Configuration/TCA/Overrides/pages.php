@@ -11,6 +11,12 @@ $newFields = [
             'default' => 0
         ],
     ],
+    'bodyclass' => [
+        'exclude' => true,  
+        'config' => [
+            'type' => 'passthrough',
+        ],
+    ],
 ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $newFields);

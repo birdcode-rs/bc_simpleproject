@@ -67,81 +67,11 @@ class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
 {
     use DataProcessingTrait;
 
-    /**
-     * @inheritDoc
-     */
-    public $allowedConfigurationKeys = [
-        'cache_period',
-        'entryLevel',
-        'entryLevel.',
-        'special',
-        'special.',
-        'minItems',
-        'minItems.',
-        'maxItems',
-        'maxItems.',
-        'begin',
-        'begin.',
-        'alternativeSortingField',
-        'alternativeSortingField.',
-        'showAccessRestrictedPages',
-        'showAccessRestrictedPages.',
-        'excludeUidList',
-        'excludeUidList.',
-        'excludeDoktypes',
-        'includeNotInMenu',
-        'includeNotInMenu.',
-        'alwaysActivePIDlist',
-        'alwaysActivePIDlist.',
-        'protectLvar',
-        'addQueryString',
-        'addQueryString.',
-        'if',
-        'if.',
-        'levels',
-        'levels.',
-        'expandAll',
-        'expandAll.',
-        'includeSpacer',
-        'includeSpacer.',
-        'as',
-        'titleField',
-        'titleField.',
-        'dataProcessing',
-        'dataProcessing.',
-
-        // New properties for EXT:headless
-        'appendData',
-        'overwriteMenuLevelConfig.',
-        'overwriteMenuConfig.',
-    ];
-
-    /**
-     * @inheritDoc
-     */
-    public $removeConfigurationKeysForHmenu = [
-        'levels',
-        'levels.',
-        'expandAll',
-        'expandAll.',
-        'includeSpacer',
-        'includeSpacer.',
-        'as',
-        'titleField',
-        'titleField.',
-        'dataProcessing',
-        'dataProcessing.',
-
-        // New properties for EXT:headless
-        'appendData',
-        'overwriteMenuLevelConfig.',
-        'overwriteMenuConfig.',
-    ];
-
+ 
     /**
      * Build the menu configuration so it can be treated by HMENU cObject and allow customization for $this->menuLevelConfig
      */
-    public function buildConfiguration()
+    public function buildConfiguration(): void
     {
         // Before rendering the actual menu via HMENU we want to update $this->menuLevelConfig
         $overwriteMenuLevelConfig = $this->getConfigurationValue('overwriteMenuLevelConfig.');

@@ -1,4 +1,6 @@
 <?php
+$holidayFlexiblePlaceholder = 'e.g. 24.12. - 26.12. Closed or Special hours: 09:00 - 13:00';
+
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_db.xlf:tx_bcsimpleproject_domain_model_t3projectdetails',
@@ -163,7 +165,7 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.logotitle',
             'config' => [
                 'type' => 'input',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => 'e.g. Your Company Logo',
@@ -178,7 +180,7 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.footernote',
              'config' => [
                 'type' => 'input',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => 'e.g. Powered by TYPO3',
@@ -193,7 +195,7 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.footercopytext',
             'config' => [
                 'type' => 'input',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => 'e.g. © 2023 Your Company Name',
@@ -238,7 +240,7 @@ return [
                 'allowedTypes' => ['email'],
                 'placeholder' => 'mailto:',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
             ],
@@ -248,7 +250,7 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.emaillabel',
             'config' => [
                 'type' => 'input',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => 'Email',
@@ -268,7 +270,7 @@ return [
                 'default' => '',
                 'eval' => 'trim',
                 'max' => 255,
-                'size' => 40,
+                'size' => 150,
                    'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -279,7 +281,7 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.phonelabel',
             'config' => [
                 'type' => 'input',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => 'Phone',
@@ -294,7 +296,7 @@ return [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.address',
              'config' => [
                 'type' => 'input',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'placeholder' => '1234 Street Name, City, State, ZIP',
@@ -327,7 +329,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.linkedin.com/in/yourprofile',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'behaviour' => [
@@ -343,7 +345,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://x.com/yourprofile',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                    'behaviour' => [
@@ -359,7 +361,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.facebook.com/YourPage',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                    'behaviour' => [
@@ -375,7 +377,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.instagram.com/yourprofile',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'behaviour' => [
@@ -391,7 +393,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.tiktok.com/@yourprofile',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'behaviour' => [
@@ -407,7 +409,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://discord.gg/yourserver',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                    'behaviour' => [
@@ -423,7 +425,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.youtube.com/channel/yourchannel',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'behaviour' => [
@@ -439,7 +441,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://github.com/profile',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                 'behaviour' => [
@@ -455,7 +457,7 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.snapchat.com/add/YOUR_USERNAME',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
                    'behaviour' => [
@@ -471,10 +473,10 @@ return [
                 'allowedTypes' => ['url'],
                 'placeholder' => 'https://www.xing.com/companies/CompanyName',
                 'default' => '',
-                'size' => 40,
+                'size' => 150,
                 'eval' => 'trim',
                 'max' => 255,
-                   'behaviour' => [
+                    'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
             ],
@@ -519,7 +521,7 @@ return [
                     'allowLanguageSynchronization' => true,
                 ],
             ],
-        ],
+        ],      
         'favicons' => [
             'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.favicons',
@@ -534,56 +536,186 @@ return [
                 ],
             ],
         ],
+        'workinginstructions' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workinginstructions',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => 'Mon - Fri: 09:00 - 17:00, Sat: 09:00 - 13:00'
+            ],
+        ],
+        'workingdatamonday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatatuesday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatawednesday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatathursday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatafriday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatasaturday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatasunday' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => '08:00 - 16:00'
+            ],
+        ],
+        'workingdatanewyear' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => $holidayFlexiblePlaceholder
+            ],
+        ],
+        'workingdatachristmas' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => $holidayFlexiblePlaceholder
+            ],
+        ],
+        'workingdataeaster' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim',
+                'placeholder' => $holidayFlexiblePlaceholder
+            ],
+        ],
+        'googleanalyticsid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'max' => 30, 
+                'eval' => 'trim'
+            ],
+        ],
+        'googleconfirmationid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid',
+            'config' => [
+                'type' => 'input',
+                'size' => 150,
+                'eval' => 'trim'
+            ],
+        ],
     ],
     'types' => [
-        '0' => [
+        '1' => [
             'showitem' => '
-                --palette--;;paletteCore,
-                --palette--;;project,
-                --palette--;;google,
-                --palette--;;social,
-                --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project,--palette--;;paletteProject,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-                    --palette--;;language,
-                    --palette--;;paletteLanguage,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-                    --palette--;;paletteHidden,
-                    --palette--;;paletteAccess;
-            ',
+                --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.main,
+                    rootpage,
+                    --palette--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.branding;palette_brand,
+                    --palette--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.contact;palette_contact,
+                    footernote, footercopytext,
+                    
+                --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.social,
+                    --palette--;;palette_social_main,
+                    --palette--;;palette_social_extra,
+                    
+                --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.working_hours,
+                    workinginstructions,
+                    --palette--;;palette_weekdays,
+                    --palette--;;palette_holidays,
+                    
+                --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.technical,
+                    --palette--;;palette_google_ids,
+                    --palette--;;palette_maps,
+                    projectembededcss, favicons
+            '
         ],
     ],
     'palettes' => [
-        'project' => [
-            'showitem' => 'rootpage,--linebreak--,logo,logodimensions,--linebreak--,logotitle,--linebreak--,
-            footerlogo,footerlogodimensions,--linebreak--,
-            footernote, footercopytext,--linebreak--,
-            email, emaillabel,--linebreak--,
-            phone, phonelabel,--linebreak--, address, addresslong'
+        'palette_brand' => [
+            'showitem' => 'logo, --linebreak--, logotitle, logodimensions, --linebreak--,  footerlogo, footerlogodimensions'
         ],
-        'google' => [
+        'palette_contact' => [
+            'showitem' => 'email, emaillabel, --linebreak--, phone, phonelabel, --linebreak--, address, addresslong'
+        ],
+        'palette_social_main' => [
+            'showitem' => 'facebookurl, --linebreak--, instagramurl, --linebreak--, linkedinurl, --linebreak--, xingurl, --linebreak--, youtubeurl'
+        ],
+        'palette_social_extra' => [
+            'showitem' => 'tiktokurl, --linebreak--, discordurl, --linebreak--, githuburl, --linebreak--, snapchaturl'
+        ],
+        'palette_holidays' => [
+            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.holidays',
+            'showitem' => 'workingdatanewyear,  --linebreak--, workingdatachristmas,  --linebreak--, workingdataeaster'
+        ],
+        'palette_weekdays' => [
+            'showitem' => 'workingdatamonday, --linebreak--, workingdatatuesday, --linebreak--, workingdatawednesday, --linebreak--, workingdatathursday, --linebreak--, workingdatafriday, --linebreak--, workingdatasaturday, --linebreak--, workingdatasunday'
+        ],
+        'palette_google_ids' => [
+            'showitem' => 'googleanalyticsid, googleconfirmationid'
+        ],
+        'palette_maps' => [
             'showitem' => 'googlemapurl, --linebreak--, googlemapembededurl'
         ],
-        'social' => [
-            'showitem' => 'instagramurl,--linebreak--,linkedinurl,--linebreak--,xurl,--linebreak--,facebookurl,--linebreak--,tiktokurl,--linebreak--,discordurl,--linebreak--,youtubeurl,--linebreak--,githuburl'
-        ],
-        'paletteHidden' => [
-            'showitem' => 'hidden',
-        ],
-        'paletteProject' => [
-            'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project',
-            'showitem' => 'projectembededcss,--linebreak--,favicons',
-        ],
-        'paletteAccess' => [
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access',
-            'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel,
-                --linebreak--,
-                fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel
-            ',
-        ],
-        'paletteLanguage' => [
-            'showitem' => 'sys_language_uid,l10n_parent,',
-        ]
     ],
 ];

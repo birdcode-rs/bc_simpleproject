@@ -47,7 +47,7 @@ final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterf
             $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
             if ($project instanceof T3projectdetails) {
-                $response = [];
+                $response = []; 
                 $response['css'] = $project->getProjectembededcss();
                 $response['favicons'] = GeneralUtility::makeInstance(SimpleHelperUtility::class)->generateFavicons($project->getFaviconsX());
                 $processedData['project'] = $response;

@@ -162,6 +162,72 @@ class T3projectdetails extends AbstractEntity
     /**
      * @var string
      */
+    protected $workinginstructions = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatamonday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatatuesday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatawednesday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatathursday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatafriday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatasaturday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatasunday = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatanewyear = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdatachristmas = '';
+
+    /**
+     * @var string
+     */
+    protected $workingdataeaster = '';
+
+    /**
+     * @var string
+     */
+    protected $googleanalyticsid = '';
+
+    /**
+     * @var string
+     */
+    protected $googleconfirmationid = '';
+
+ 
+    /**
+     * @var string
+     */
     protected $favicons = '';
   
     public function __construct()
@@ -855,9 +921,9 @@ class T3projectdetails extends AbstractEntity
     }
  
     /**
-     * Method setGooglemapembededurl
+     * Method setProjectembededcss
      *
-     * @param string $googlemapembededurl
+     * @param string $projectembededcss
      *
      * @return void
      */
@@ -867,7 +933,7 @@ class T3projectdetails extends AbstractEntity
     }
     
     /**
-     * Method getGooglemapembededurl
+     * Method getProjectembededcss
      *
      * @return string
      */
@@ -875,7 +941,7 @@ class T3projectdetails extends AbstractEntity
     {
         return $this->projectembededcss;
     }
-
+ 
     /**
      * Method setFavicons
      *
@@ -906,5 +972,213 @@ class T3projectdetails extends AbstractEntity
     public function getFaviconsX(): array
     {
         return json_decode($this->favicons, true) ?: [];
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkinginstructions()
+    {
+        return $this->workinginstructions;
+    }
+
+    /**
+     * @param string $workinginstructions
+     */
+    public function setWorkinginstructions(string $workinginstructions)
+    {
+        $this->workinginstructions = $workinginstructions;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatamonday()
+    {
+        return $this->workingdatamonday;
+    }
+
+    /**
+     * @param string $workingdatamonday
+     */
+    public function setWorkingdatamonday(string $workingdatamonday)
+    {
+        $this->workingdatamonday = $workingdatamonday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatatuesday()
+    {
+        return $this->workingdatatuesday;
+    }
+
+    /**
+     * @param string $workingdatatuesday
+     */
+    public function setWorkingdatatuesday(string $workingdatatuesday)
+    {
+        $this->workingdatatuesday = $workingdatatuesday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatawednesday()
+    {
+        return $this->workingdatawednesday;
+    }
+
+    /**
+     * @param string $workingdatawednesday
+     */
+    public function setWorkingdatawednesday(string $workingdatawednesday)
+    {
+        $this->workingdatawednesday = $workingdatawednesday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatathursday()
+    {
+        return $this->workingdatathursday;
+    }
+
+    /**
+     * @param string $workingdatathursday
+     */
+    public function setWorkingdatathursday(string $workingdatathursday)
+    {
+        $this->workingdatathursday = $workingdatathursday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatafriday()
+    {
+        return $this->workingdatafriday;
+    }
+
+    /**
+     * @param string $workingdatafriday
+     */
+    public function setWorkingdatafriday(string $workingdatafriday)
+    {
+        $this->workingdatafriday = $workingdatafriday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatasaturday()
+    {
+        return $this->workingdatasaturday;
+    }
+
+    /**
+     * @param string $workingdatasaturday
+     */
+    public function setWorkingdatasaturday(string $workingdatasaturday)
+    {
+        $this->workingdatasaturday = $workingdatasaturday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatasunday()
+    {
+        return $this->workingdatasunday;
+    }
+
+    /**
+     * @param string $workingdatasunday
+     */
+    public function setWorkingdatasunday(string $workingdatasunday)
+    {
+        $this->workingdatasunday = $workingdatasunday;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatanewyear()
+    {
+        return $this->workingdatanewyear;
+    }
+
+    /**
+     * @param string $workingdatanewyear
+     */
+    public function setWorkingdatanewyear(string $workingdatanewyear)
+    {
+        $this->workingdatanewyear = $workingdatanewyear;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdatachristmas()
+    {
+        return $this->workingdatachristmas;
+    }
+
+    /**
+     * @param string $workingdatachristmas
+     */
+    public function setWorkingdatachristmas(string $workingdatachristmas)
+    {
+        $this->workingdatachristmas = $workingdatachristmas;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkingdataeaster()
+    {
+        return $this->workingdataeaster;
+    }
+
+    /**
+     * @param string $workingdataeaster
+     */
+    public function setWorkingdataeaster(string $workingdataeaster)
+    {
+        $this->workingdataeaster = $workingdataeaster;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGoogleanalyticsid()
+    {
+        return $this->googleanalyticsid;
+    }
+
+    /**
+     * @param string $googleanalyticsid
+     */
+    public function setGoogleanalyticsid(string $googleanalyticsid)
+    {
+        $this->googleanalyticsid = $googleanalyticsid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGoogleconfirmationid()
+    {
+        return $this->googleconfirmationid;
+    }
+
+    /**
+     * @param string $googleconfirmationid
+     */
+    public function setGoogleconfirmationid(string $googleconfirmationid)
+    {
+        $this->googleconfirmationid = $googleconfirmationid;
     }
 }

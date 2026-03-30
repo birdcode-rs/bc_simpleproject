@@ -74,6 +74,20 @@ final class T3projectdetailsHeadlessProcessor implements DataProcessorInterface
                     'googlemapurl' => $project->getGooglemapurl(),
                     'googlemapembededurl' => $project->getGooglemapembededurl(),
                     'projectembededcss' => $project->getProjectembededcss(),
+                    'workinginstructions' => $project->getWorkinginstructions(),
+                    'workingdatamonday' => $project->getWorkingdatamonday(),
+                    'workingdatatuesday' => $project->getWorkingdatatuesday(),
+                    'workingdatawednesday' => $project->getWorkingdatawednesday(),
+                    'workingdatathursday' => $project->getWorkingdatathursday(),
+                    'workingdatafriday' => $project->getWorkingdatafriday(),
+                    'workingdatasaturday' => $project->getWorkingdatasaturday(),
+                    'workingdatasunday' => $project->getWorkingdatasunday(),
+                    'workingdatanewyear' => $project->getWorkingdatanewyear(),
+                    'workingdatachristmas' => $project->getWorkingdatachristmas(),
+                    'workingdataeaster' => $project->getWorkingdataeaster(),
+                    'googleanalyticsid' => $project->getGoogleanalyticsid(),
+                    'googleconfirmationid' => $project->getGoogleconfirmationid(),
+                    'favicons' => $project->getFavicons(),
                 ];
     
                 if (!empty($project->getFirstLogo())) {
