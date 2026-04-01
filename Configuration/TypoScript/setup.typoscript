@@ -76,4 +76,11 @@ page.headerData {
 }
  
 page.stdWrap.postUserFunc = BirdCode\BcSimpleproject\Utility\HtmlPartsReplacment->processDoReplacements
+
+
+lib.isBeUser = TEXT
+lib.isBeUser.value = 0
+
+[]
+page.littleHelpper.value = This is a little helper to trigger the page object and its
  

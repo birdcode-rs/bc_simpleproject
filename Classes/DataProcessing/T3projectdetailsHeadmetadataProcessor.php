@@ -13,6 +13,7 @@ namespace BirdCode\BcSimpleproject\DataProcessing;
 use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails; 
 use BirdCode\BcSimpleproject\Utility\SimpleHelperUtility;
 use BirdCode\BcSimpleproject\Utility\SimpleprojectUtility;
+use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -46,9 +47,16 @@ final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterf
             $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
             if ($project instanceof T3projectdetails) {
-                $response = []; 
+
+                $context = GeneralUtility::makeInstance(Context::class);
+                $isUserLoggedIn = $context->getPropertyFromAspect('backend.user', 'isLoggedIn');
+
+                $response = [];
+                if (! $isUserLoggedIn) {
+                    $response['googleanalyticsid'] = $project->getGoogleanalyticsid();    
+                }
                 $response['googleconfirmationid'] = $project->getGoogleconfirmationid();
-                $response['googleanalyticsid'] = $project->getGoogleanalyticsid();
+                
                 $response['css'] = $project->getProjectembededcss();
                 $response['favicons'] = GeneralUtility::makeInstance(SimpleHelperUtility::class)->generateFavicons($project->getFaviconsX());
                 $processedData['project'] = $response;

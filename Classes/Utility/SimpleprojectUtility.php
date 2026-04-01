@@ -40,6 +40,8 @@ class SimpleprojectUtility
         $project = null;
 
         $context = GeneralUtility::makeInstance(Context::class);
+        $isBeUser = (bool)$context->getPropertyFromAspect('backend.user', 'isLoggedIn');
+        
         $languageAspect = $context->getAspect('language');
         $currentLanguageId = $languageAspect->getId();
         

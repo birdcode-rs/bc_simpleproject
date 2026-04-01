@@ -543,7 +543,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => 'Mon - Fri: 09:00 - 17:00, Sat: 09:00 - 13:00'
+                'placeholder' => 'Mon - Fri: 09:00 - 17:00, Sat: 09:00 - 13:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatamonday' => [
@@ -553,7 +556,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatatuesday' => [
@@ -563,7 +569,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatawednesday' => [
@@ -573,7 +582,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatathursday' => [
@@ -583,7 +595,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatafriday' => [
@@ -593,7 +608,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatasaturday' => [
@@ -603,7 +621,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatasunday' => [
@@ -613,7 +634,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00'
+                'placeholder' => '08:00 - 16:00',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatanewyear' => [
@@ -623,7 +647,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => $holidayFlexiblePlaceholder
+                'placeholder' => $holidayFlexiblePlaceholder,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdatachristmas' => [
@@ -633,7 +660,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => $holidayFlexiblePlaceholder
+                'placeholder' => $holidayFlexiblePlaceholder,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'workingdataeaster' => [
@@ -643,7 +673,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => $holidayFlexiblePlaceholder
+                'placeholder' => $holidayFlexiblePlaceholder,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'googleanalyticsid' => [
@@ -653,7 +686,10 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'max' => 30, 
-                'eval' => 'trim'
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'googleconfirmationid' => [
@@ -662,7 +698,10 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 150,
-                'eval' => 'trim'
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
     ],
@@ -680,7 +719,6 @@ return [
                     --palette--;;palette_social_extra,
                     
                 --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.working_hours,
-                    workinginstructions,
                     --palette--;;palette_weekdays,
                     --palette--;;palette_holidays,
                     
@@ -704,12 +742,12 @@ return [
         'palette_social_extra' => [
             'showitem' => 'tiktokurl, --linebreak--, discordurl, --linebreak--, githuburl, --linebreak--, snapchaturl'
         ],
+        'palette_weekdays' => [
+            'showitem' => 'workinginstructions, --linebreak--, workingdatamonday, --linebreak--, workingdatatuesday, --linebreak--, workingdatawednesday, --linebreak--, workingdatathursday, --linebreak--, workingdatafriday, --linebreak--, workingdatasaturday, --linebreak--, workingdatasunday'
+        ],
         'palette_holidays' => [
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.holidays',
             'showitem' => 'workingdatanewyear,  --linebreak--, workingdatachristmas,  --linebreak--, workingdataeaster'
-        ],
-        'palette_weekdays' => [
-            'showitem' => 'workingdatamonday, --linebreak--, workingdatatuesday, --linebreak--, workingdatawednesday, --linebreak--, workingdatathursday, --linebreak--, workingdatafriday, --linebreak--, workingdatasaturday, --linebreak--, workingdatasunday'
         ],
         'palette_google_ids' => [
             'showitem' => 'googleanalyticsid, googleconfirmationid'
