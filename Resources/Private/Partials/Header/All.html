@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{data.preheader} || {data.header} || {data.subheader} || {data.date}">
+        <header>
+            <f:if condition="{data.prehea1r_layout} != 100">
+                <f:render partial="Header/PreHeader" arguments="{
+                    preheader: data.preheader,
+                    layout: data.preheader_layout,
+                    class: data.preheader_class,
+                    positionClass: '{f:if(condition: data.preheader_position, then: \'ce-headline-{data.preheader_position}\')}',
+                    default: settings.defaultPreHeaderType}" />
+            </f:if>
+            <f:if condition="{data.header_layout} != 100">
+                <f:render partial="Header/Header" arguments="{
+                    header: data.header,
+                    layout: data.header_layout,
+                    class: data.header_class,
+                    positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                    link: data.header_link,
+                    default: settings.defaultHeaderType}" />
+            </f:if>
+            <f:if condition="{data.subheader_layout} != 100">
+                <f:render partial="Header/SubHeader" arguments="{
+                    subheader: data.subheader,
+                    layout: data.subheader_layout,
+                    class: data.subheader_class,
+                    positionClass: '{f:if(condition: data.subheader_position, then: \'ce-headline-{data.subheader_position}\')}',
+                    default: settings.defaultSubHeaderType}" />
+            </f:if>        
+            <f:if condition="{data.header_layout} != 100">
+                <f:render partial="Header/Date" arguments="{
+                    date: data.date,
+                    positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
+            </f:if>
+        </header>
+    </f:if>
+</html>

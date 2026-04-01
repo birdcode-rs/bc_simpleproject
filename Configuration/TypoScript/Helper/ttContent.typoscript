@@ -1,0 +1,128 @@
+
+########################################
+#### Default Header Settings ###########
+########################################
+tt_content.bullets.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.bullets.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.div.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.div.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.header.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.header.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.html.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.html.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.image.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.image.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_abstract.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_abstract.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.list.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.list.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_categorized_content.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_categorized_content.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_categorized_pages.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_categorized_pages.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_pages.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_pages.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_recently_updated.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_recently_updated.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_related_pages.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_related_pages.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_section.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_section.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_section_pages.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_section_pages.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_sitemap.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_sitemap.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_sitemap_pages.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_sitemap_pages.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.menu_subpages.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.menu_subpages.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.shortcut.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.shortcut.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.text.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.text.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.table.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.table.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.textmedia.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.textmedia.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.textpic.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.textpic.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+tt_content.uploads.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
+tt_content.uploads.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+########################################
+## Add new fields to content elements ##
+########################################
+lib.contentElementWithHeader {
+    fields {
+      appearance {
+          fields {
+            contentBackgroundColor = TEXT
+            contentBackgroundColor {
+                field = content_background_color
+            }
+            embededcss = TEXT
+            embededcss {
+              field = embededcss
+            }
+          }
+        }
+        content {
+            fields {
+                preheader = TEXT
+                preheader {
+                    field = preheader
+                }
+                preheaderLayout = INT
+                preheaderLayout {
+                    field = preheader_layout
+                }
+                preheaderPosition = TEXT
+                preheaderPosition {
+                    field = preheader_position
+                }
+                subheaderLayout = INT
+                subheaderLayout {
+                    field = subheader_layout
+                }
+                subheaderPosition = TEXT
+                subheaderPosition {
+                    field = subheader_position
+                }
+                class = TEXT
+                class {
+                    field = class
+                }
+                headerClass = TEXT
+                headerClass {
+                    field = header_class
+                }
+                preheaderClass = TEXT
+                preheaderClass {
+                    field = preheader_class
+                }
+            }
+        }
+    }
+}

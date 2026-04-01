@@ -1,9 +1,19 @@
+######################
+#### DEPENDENCIES ####
+###################### 
+@import './Helper/ttContent.typoscript'
+@import './Helper/headTags.typoscript'
+ 
 ###############################################################
 #### Include T3projectdetailsProcessor | variable: project ####
 ###############################################################
 
 page.10.dataProcessing.1389 = BirdCode\BcSimpleproject\DataProcessing\T3projectdetailsProcessor
- 
+
+#####################################
+#### Support rendering head data ####
+#####################################
+page.headerData.1389 =< lib.headTags
 
 ########################################
 #### Support rendering embedded css ####
@@ -31,5 +41,46 @@ page.headerData {
             4.if.isTrue.data = field:embededcss
         }
     }
-}
 
+    1989.10 = CONTENT
+    1989.10 {
+        table = tt_content
+        select.where = hidden=0 and CType='shortcut'
+        select.pidInList = this
+        select.orderBy = sorting
+
+        renderObj = COA
+        renderObj {
+
+            5 = TEXT
+            5.field = records
+            5.split {
+                token = ,
+                cObjNum = 1
+                1 {
+                    10 = RECORDS
+                    10.tables = tt_content
+                    10.source.current = 1
+                    10.conf.tt_content = TEXT
+                    10.conf.tt_content.stdWrap.field = embededcss
+                    10.conf.tt_content.stdWrap.replacement.10 {
+                        search = ###UID###
+                        replace.cObject = TEXT
+                        replace.cObject.value = #c{field:uid}
+                        replace.cObject.insertData = 1
+                    }
+                }
+            }    
+        }
+    }
+}
+ 
+page.stdWrap.postUserFunc = BirdCode\BcSimpleproject\Utility\HtmlPartsReplacment->processDoReplacements
+
+
+lib.isBeUser = TEXT
+lib.isBeUser.value = 0
+
+[]
+page.littleHelpper.value = This is a little helper to trigger the page object and its
+ 

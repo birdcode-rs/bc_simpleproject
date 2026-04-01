@@ -10,17 +10,19 @@ declare(strict_types=1);
 
 namespace BirdCode\BcSimpleproject\DataProcessing;
  
-use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails;
+use BirdCode\BcSimpleproject\Domain\Model\T3projectdetails; 
+use BirdCode\BcSimpleproject\Utility\SimpleHelperUtility;
 use BirdCode\BcSimpleproject\Utility\SimpleprojectUtility;
+use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer; 
  
 /**
- * T3projectdetailsProcessor
+ * T3projectdetailsHeadmetadataProcessor
  */
-final class T3projectdetailsProcessor implements DataProcessorInterface
+final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterface
 {   
     /**
      * Process data of a record to resolve File objects to the view
@@ -32,22 +34,34 @@ final class T3projectdetailsProcessor implements DataProcessorInterface
      * @return array the processed data as key/value store
      */
     public function process(
-        ContentObjectRenderer $cObj,
-        array $contentObjectConfiguration,
-        array $processorConfiguration,
+        ContentObjectRenderer $cObj, 
+        array $contentObjectConfiguration, 
+        array $processorConfiguration, 
         array $processedData
     ): array {
         $pageUid = $cObj->getRequest()->getAttribute('routing')->getPageId();
         $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid);
         $rootline = $rootlineUtility->get();
-
+ 
         foreach ($rootline as $key => $value) {
             $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
-            if ($project instanceof T3projectdetails) { 
-                $processedData['project'] = $project;
+            if ($project instanceof T3projectdetails) {
+
+                $context = GeneralUtility::makeInstance(Context::class);
+                $isUserLoggedIn = $context->getPropertyFromAspect('backend.user', 'isLoggedIn');
+
+                $response = [];
+                if (! $isUserLoggedIn) {
+                    $response['googleanalyticsid'] = $project->getGoogleanalyticsid();    
+                }
+                $response['googleconfirmationid'] = $project->getGoogleconfirmationid();
+                
+                $response['css'] = $project->getProjectembededcss();
+                $response['favicons'] = GeneralUtility::makeInstance(SimpleHelperUtility::class)->generateFavicons($project->getFaviconsX());
+                $processedData['project'] = $response;
                 return $processedData;
-            }   
+            }
         }
 
         return $processedData;

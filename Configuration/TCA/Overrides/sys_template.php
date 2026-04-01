@@ -15,8 +15,7 @@ call_user_func(function()
         'Configuration/TypoScript',
         'BC Simple Project'
     );
-
-    
+ 
     /**
      * Headless TypoScript for bc_simpleproject
      */

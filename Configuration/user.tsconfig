@@ -1,0 +1,11 @@
+###################################
+#### TCEFORM tt_content ###########
+###################################
+TCEFORM {
+    tt_content {
+        preheader.disabled = 1
+		preheader_class.disabled = 1
+		preheader_layout.disabled = 1
+		preheader_position.disabled = 1
+    }
+}

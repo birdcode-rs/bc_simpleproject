@@ -6,9 +6,37 @@
             <authorEmail>bird.dev@birdcode.in.rs</authorEmail>
         </header>
         <body>
-            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
-                <source>ROOT page ID</source>
-                <target>ROOT-Seiten-ID</target>
+            <trans-unit id="palette.project">
+                <source>Project specific configuration</source>
+                <target>Projektspezifische Konfiguration</target>
+            </trans-unit>
+            <trans-unit id="palette.project.main" resname="palette.project.main">
+                <source>Main Configuration</source>
+                <target>Hauptkonfiguration</target>
+            </trans-unit>
+            <trans-unit id="palette.project.branding" resname="palette.project.branding">
+                <source>Identity &amp; Logos</source>
+                <target>Identität &amp; Logos</target>
+            </trans-unit>
+            <trans-unit id="palette.project.contact" resname="palette.project.contact">
+                <source>Core Contact Info</source>
+                <target>Zentrale Kontaktinformationen</target>
+            </trans-unit>
+            <trans-unit id="palette.project.social" resname="palette.project.social">
+                <source>Social Media</source>
+                <target>Social Media</target>
+            </trans-unit>
+            <trans-unit id="palette.project.technical" resname="palette.project.technical">
+                <source>Technical &amp; SEO</source>
+                <target>Technik &amp; SEO</target>
+            </trans-unit>
+            <trans-unit id="palette.project.holidays" resname="palette.project.holidays">
+                <source>Holidays</source>
+                <target>Feiertage</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage" resname="tx_bcsimpleproject_domain_model_t3projectdetails.rootpage">
+                <source>Root Page ID (Entry Point)</source>
+                <target>Root-Seiten-ID (Einstiegspunkt)</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logo">
                 <source>Logo</source>
@@ -19,16 +47,24 @@
                 <target>Logo Titel</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions">
-                <source>Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
-                <target>Logo-Abmessungen [fügen Sie JSON-Code wie {"width":"500","height":"300"} ein]</target>
+                <source>Logo Dimesions</source>
+                <target>Logo-Abmessungen</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.logodimensions.description">
+                <source>Add json code like {"width":"500","height":"300"}</source>
+                <target>Fügen Sie JSON-Code wie {"width":"500","height":"300"} ein</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogo">
                 <source>Footer Logo</source>
                 <target>Footer-Logo</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions">
-                <source>Footer Logo Dimesions [add json code like {"width":"500","height":"300"}]</source>
-                <target>Footer-Logo-Abmessungen [fügen Sie JSON-Code wie {"width":"500","height":"300"} ein]</target>
+                <source>Footer Logo Dimesions</source>
+                <target>Footer-Logo-Abmessungen</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footerlogodimensions.description">
+                <source>Add json code like {"width":"500","height":"300"}</source>
+                <target>Fügen Sie JSON-Code wie {"width":"500","height":"300"} ein</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.footernote">
                 <source>Footer Note</source>
@@ -87,7 +123,7 @@
                 <target>Discord-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.youtubeurl">
-                <source>You Tube URL</source>
+                <source>YouTube URL</source>
                 <target>YouTube-URL</target>
             </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.githuburl">
@@ -98,14 +134,134 @@
                 <source>Google map URL</source>
                 <target>Google-Maps-URL</target>
             </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.xingurl">
+                <source>XING URL</source>
+                <target>XING-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.snapchaturl">
+                <source>Snapchat URL</source>
+                <target>Snapchat-URL</target>
+            </trans-unit>
             <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googlemapembededurl">
                 <source>Google Map Iframe embeded URL</source>
                 <target>Google Maps Iframe eingebettete URL</target>
             </trans-unit> 
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
+                <source>Body class</source>
+                <target>Body class</target>
+            </trans-unit>            
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.projectembededcss">
+                <source>Custom CSS styles embedded for this project</source>
+                <target>Benutzerdefinierte CSS-Stile für dieses Projekt</target>
+            </trans-unit>
             <trans-unit id="tt_content.embededcss">
-                <source>Add CSS: each new CSS line should start with ###UID### in order to apply the style to the current element</source>
-                <target>CSS hinzufügen: Jede neue CSS-Zeile sollte mit ###UID### beginnen, um den Stil auf das aktuelle Element anzuwenden.</target>
-            </trans-unit>        
+                <source>Embedded CSS</source>
+                <target>Eingebettetes CSS</target>
+            </trans-unit>
+            <trans-unit id="tt_content.embededcss.description">
+                <source>Prefix each CSS rule with ###UID### to apply it only to this element</source>
+                <target>Jede CSS-Regel mit ###UID### beginnen, um sie nur auf dieses Element anzuwenden</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatamonday">
+                <source>Monday</source>
+                <target>Montag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatatuesday">
+                <source>Tuesday</source>
+                <target>Dienstag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatawednesday">
+                <source>Wednesday</source>
+                <target>Mittwoch</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatathursday">
+                <source>Thursday</source>
+                <target>Donnerstag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatafriday">
+                <source>Friday</source>
+                <target>Freitag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasaturday">
+                <source>Saturday</source>
+                <target>Samstag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatasunday">
+                <source>Sunday</source>
+                <target>Sonntag</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatanewyear">
+                <source>New Year's Day</source>
+                <target>Neujahr</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdatachristmas">
+                <source>Christmas</source>
+                <target>Weihnachten</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster" resname="tx_bcsimpleproject_domain_model_t3projectdetails.workingdataeaster">
+                <source>Easter</source>
+                <target>Ostern</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleanalyticsid">
+                <source>Google Analytics Tracking ID</source>
+                <target>Google Analytics Tracking-ID</target>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid">
+                <source>Google Site Verification ID</source>
+                <target>Google Website-Bestätigungs-ID</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader">
+                <source>Preheader</source>
+                <target>Preheader</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_class">
+                <source>Preheader Class</source>
+                <target>Preheader-Klasse</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout">
+                <source>Preheader Type</source>
+                <target>Preheader-Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.1">
+                <source>Layout tag:span</source>
+                <target>Layout-Tag:span</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.2">
+                <source>Layout tag:strong</source>
+                <target>Layout-Tag:strong</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.3">
+                <source>Layout tag:p</source>
+                <target>Layout-Tag:p</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_layout.I.4">
+                <source>Layout tag:div</source>
+                <target>Layout-Tag:div</target>
+            </trans-unit>
+            <trans-unit id="tt_content.preheader_position">
+                <source>Preheader Alignment</source>
+                <target>Ausrichtung des Preheaders</target>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_position">
+                <source>Subheader Alignment</source>
+                <target>Ausrichtung des Untertitels</target>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_layout">
+                <source>Subheader Type</source>
+                <target>Untertitel-Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.subheader_class">
+                <source>Subheader Class</source>
+                <target>Untertitel-Klasse</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_class">
+                <source>Class</source>
+                <target>Klasse</target>
+            </trans-unit>
+            <trans-unit id="pages.exclude_from_sitemap">
+                <source>Exclude from Sitemap</source>
+                <target>Von der Sitemap ausschließen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
