@@ -223,7 +223,6 @@ class T3projectdetails extends AbstractEntity
      * @var string
      */
     protected $googleconfirmationid = '';
-
  
     /**
      * @var string

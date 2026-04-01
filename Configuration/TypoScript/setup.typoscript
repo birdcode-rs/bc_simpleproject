@@ -74,7 +74,6 @@ page.headerData {
         }
     }
 }
-
-
+ 
 page.stdWrap.postUserFunc = BirdCode\BcSimpleproject\Utility\HtmlPartsReplacment->processDoReplacements
  

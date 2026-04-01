@@ -70,3 +70,59 @@ tt_content.textpic.settings.defaultPreHeaderType = {$styles.content.defaultPreHe
 
 tt_content.uploads.settings.defaultSubHeaderType = {$styles.content.defaultSubHeaderType}
 tt_content.uploads.settings.defaultPreHeaderType = {$styles.content.defaultPreHeaderType}
+
+########################################
+## Add new fields to content elements ##
+########################################
+lib.contentElementWithHeader {
+    fields {
+      appearance {
+          fields {
+            contentBackgroundColor = TEXT
+            contentBackgroundColor {
+                field = content_background_color
+            }
+            embededcss = TEXT
+            embededcss {
+              field = embededcss
+            }
+          }
+        }
+        content {
+            fields {
+                preheader = TEXT
+                preheader {
+                    field = preheader
+                }
+                preheaderLayout = INT
+                preheaderLayout {
+                    field = preheader_layout
+                }
+                preheaderPosition = TEXT
+                preheaderPosition {
+                    field = preheader_position
+                }
+                subheaderLayout = INT
+                subheaderLayout {
+                    field = subheader_layout
+                }
+                subheaderPosition = TEXT
+                subheaderPosition {
+                    field = subheader_position
+                }
+                class = TEXT
+                class {
+                    field = class
+                }
+                headerClass = TEXT
+                headerClass {
+                    field = header_class
+                }
+                preheaderClass = TEXT
+                preheaderClass {
+                    field = preheader_class
+                }
+            }
+        }
+    }
+}

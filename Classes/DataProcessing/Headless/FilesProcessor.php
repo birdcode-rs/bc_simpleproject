@@ -89,6 +89,19 @@ class FilesProcessor implements DataProcessorInterface
             }
         }
 
+        $dimensions = $cObj->stdWrapValue('dimensions', $processedData, null);
+        if (isset($dimensions['width']) || isset($dimensions['height'])) {
+            $properties['width'] = $dimensions['width'] ?? null;
+            $properties['height'] = $dimensions['height'] ?? null;
+        }
+
+        $fileWidth = $cObj->stdWrapValue('file_width', $processedData, null);
+        $fileHeight = $cObj->stdWrapValue('file_height', $processedData, null);
+        if (isset($fileWidth) || isset($fileHeight)) {
+            $properties['width'] = $fileWidth ?? null;
+            $properties['height'] = $fileHeight ?? null;
+        }
+ 
         $this->contentObjectRenderer = $cObj;
         $this->processorConfiguration = $processorConfiguration;
 
@@ -200,7 +213,12 @@ class FilesProcessor implements DataProcessorInterface
 
         return $data;
     }
-
+    
+    /**
+     * Method getFileUtility
+     *
+     * @return FileUtility
+     */
     protected function getFileUtility(): FileUtility
     {
         return GeneralUtility::makeInstance(FileUtility::class);

@@ -66,7 +66,6 @@ use function is_array;
 class MenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
 {
     use DataProcessingTrait;
-
  
     /**
      * Build the menu configuration so it can be treated by HMENU cObject and allow customization for $this->menuLevelConfig

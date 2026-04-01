@@ -21,3 +21,120 @@ t3project_details {
         dataProcessing < lib.T3projectdetails.dataProcessing
     }
 }
+
+#######################################
+## Add new fields to content elements ##
+#######################################
+lib.contentElementWithHeader {
+    fields {
+      appearance {
+          fields {
+            contentBackgroundColor = TEXT
+            contentBackgroundColor {
+                field = content_background_color
+            }
+            embededcss = TEXT
+            embededcss {
+              field = embededcss
+            }
+          }
+        }
+        content {
+            fields {
+                preheader = TEXT
+                preheader {
+                    field = preheader
+                }
+                preheaderLayout = INT
+                preheaderLayout {
+                    field = preheader_layout
+                }
+                preheaderPosition = TEXT
+                preheaderPosition {
+                    field = preheader_position
+                }
+                subheaderLayout = INT
+                subheaderLayout {
+                    field = subheader_layout
+                }
+                subheaderPosition = TEXT
+                subheaderPosition {
+                    field = subheader_position
+                }
+                class = TEXT
+                class {
+                    field = class
+                }
+                headerClass = TEXT
+                headerClass {
+                    field = header_class
+                }
+                preheaderClass = TEXT
+                preheaderClass {
+                    field = preheader_class
+                }
+            }
+        }
+    }
+}
+
+tt_content.felogin_login =< lib.contentElementWithHeader
+tt_content.felogin_login {
+    dataProcessing >
+    fields {
+        content {
+            fields {
+              preheader = TEXT
+                preheader {
+                    field = preheader
+                }
+                preheaderLayout = INT
+                preheaderLayout {
+                    field = preheader_layout
+                }
+                preheaderPosition = TEXT
+                preheaderPosition {
+                    field = preheader_position
+                }
+                subheaderLayout = INT
+                subheaderLayout {
+                    field = subheader_layout
+                }
+                subheaderPosition = TEXT
+                subheaderPosition {
+                    field = subheader_position
+                }
+                class = TEXT
+                class {
+                    field = class
+                }
+                headerClass = TEXT
+                headerClass {
+                    field = header_class
+                }
+                preheaderClass = TEXT
+                preheaderClass {
+                    field = preheader_class
+                }
+                data = USER
+                data {
+                    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                    vendorName = TYPO3\CMS
+                    extensionName = Felogin
+                    pluginName = Login
+                    controller = Login
+                    persistence < plugin.tx_felogin_login.persistence
+                    settings < plugin.tx_felogin_login.settings
+                    stdWrap.trim = 1
+                }
+            }
+        }
+    }
+}
+
+
+[request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+lib.breadcrumbs.dataProcessing.10.includeNotInMenu = 0
+lib.breadcrumbs.dataProcessing.20 = GeorgRinger\News\DataProcessing\AddNewsToMenuProcessor
+lib.breadcrumbs.dataProcessing.20.menus = breadcrumbs
+[end]
