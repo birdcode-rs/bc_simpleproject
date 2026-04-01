@@ -38,10 +38,7 @@ class SimpleprojectUtility
     public function init(int $pageId, string $fieldName = 'pid'): ?T3projectdetails 
     {
         $project = null;
-
         $context = GeneralUtility::makeInstance(Context::class);
-        $isBeUser = (bool)$context->getPropertyFromAspect('backend.user', 'isLoggedIn');
-        
         $languageAspect = $context->getAspect('language');
         $currentLanguageId = $languageAspect->getId();
         
