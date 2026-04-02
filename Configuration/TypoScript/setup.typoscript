@@ -50,7 +50,7 @@ page.headerData {
 
         renderObj = COA
         renderObj {
-
+            
             5 = TEXT
             5.field = records
             5.split {
@@ -73,5 +73,3 @@ page.headerData {
         }
     }
 }
- 
-page.stdWrap.postUserFunc = BirdCode\BcSimpleproject\Utility\HtmlPartsReplacment->processDoReplacements

@@ -22,9 +22,9 @@ t3project_details {
     }
 }
 
-#######################################
+########################################
 ## Add new fields to content elements ##
-#######################################
+########################################
 lib.contentElementWithHeader {
     fields {
       appearance {
@@ -134,7 +134,7 @@ tt_content.felogin_login {
 
 
 [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
-lib.breadcrumbs.dataProcessing.10.includeNotInMenu = 0
-lib.breadcrumbs.dataProcessing.20 = GeorgRinger\News\DataProcessing\AddNewsToMenuProcessor
-lib.breadcrumbs.dataProcessing.20.menus = breadcrumbs
+    lib.breadcrumbs.dataProcessing.10.includeNotInMenu = 0
+    lib.breadcrumbs.dataProcessing.20 = GeorgRinger\News\DataProcessing\AddNewsToMenuProcessor
+    lib.breadcrumbs.dataProcessing.20.menus = breadcrumbs
 [end]

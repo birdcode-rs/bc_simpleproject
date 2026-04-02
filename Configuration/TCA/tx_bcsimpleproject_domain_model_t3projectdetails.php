@@ -1,6 +1,10 @@
 <?php
-$holidayFlexiblePlaceholder = 'e.g. 24.12. - 26.12. Closed or Special hours: 09:00 - 13:00';
 
+defined('TYPO3') or die;
+
+$holidayFlexiblePlaceholder = 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.holiday_flexible';
+$workingHoursPlaceholder = 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.working_hours';
+ 
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_db.xlf:tx_bcsimpleproject_domain_model_t3projectdetails',
@@ -23,7 +27,10 @@ return [
             'endtime' => 'endtime',
             'fe_group' => 'fe_group',
         ],
-        'searchFields' => 'rootpage,logotitle,footernote,footercopytext,emaillabel,phonelabel,address,addresslong,projectembededcss',
+        'searchFields' => 'rootpage,logotitle,footernote,footercopytext,emaillabel,phonelabel,address,addresslong,projectembededcss,
+            googleconfirmationid,googleanalyticsid,linkedinurl,xurl,facebookurl,instagramurl,tiktokurl,discordurl,youtubeurl,githuburl,
+            snapchaturl,xingurl,googlemapurl,workinginstructions,workingdatamonday,workingdatatuesday,workingdatawednesday,workingdatathursday,
+            workingdatafriday,workingdatasaturday,workingdatasunday,workingdatanewyear,workingdatachristmas,workingdataeaster',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
@@ -276,7 +283,7 @@ return [
                 ],
             ],
         ],
-        'phonelabel' => [
+        'phonelabel' => [ 
             'exclude' => true,
             'label' => 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:tx_bcsimpleproject_domain_model_t3projectdetails.phonelabel',
             'config' => [
@@ -556,7 +563,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -569,7 +576,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -582,7 +589,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -595,7 +602,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -608,7 +615,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -621,7 +628,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -634,7 +641,7 @@ return [
                 'type' => 'input',
                 'size' => 150,
                 'eval' => 'trim',
-                'placeholder' => '08:00 - 16:00',
+                'placeholder' => $workingHoursPlaceholder,
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
@@ -706,7 +713,7 @@ return [
         ],
     ],
     'types' => [
-        '1' => [
+        0 => [
             'showitem' => '
                 --div--;LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_be.xlf:palette.project.main,
                     rootpage,

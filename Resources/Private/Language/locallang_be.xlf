@@ -237,6 +237,12 @@
 			<trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid" resname="tx_bcsimpleproject_domain_model_t3projectdetails.googleconfirmationid">
 				<source>Google Site Verification ID</source>
 			</trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.holiday_flexible" resname="tx_bcsimpleproject_domain_model_t3projectdetails.holiday_flexible">
+                <source>e.g. 24.12. - 26.12. Closed or Special hours: 09:00 - 13:00</source>
+            </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.working_hours_placeholder" resname="tx_bcsimpleproject_domain_model_t3projectdetails.working_hours_placeholder">
+                <source>08:00 - 16:00</source>
+            </trans-unit>    
         </body>
     </file>
 </xliff>

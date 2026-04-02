@@ -214,7 +214,5 @@ $GLOBALS['TCA']['tt_content']['palettes']['headers'] = [
         subheader;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:subheader_formlabel, subheader_class,--linebreak--, subheader_layout,  subheader_position,
     ',
 ];
-
-
-
+ 
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['bc_simpleproject'] = 'LLL:EXT:bc_simpleproject/Resources/Private/Language/locallang_db.xlf:pi1_title';

@@ -47,7 +47,6 @@ final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterf
             $project = GeneralUtility::makeInstance(SimpleprojectUtility::class)->init($value['uid']);
  
             if ($project instanceof T3projectdetails) {
-
                 $context = GeneralUtility::makeInstance(Context::class);
                 $isUserLoggedIn = $context->getPropertyFromAspect('backend.user', 'isLoggedIn');
 
@@ -56,7 +55,6 @@ final class T3projectdetailsHeadmetadataProcessor implements DataProcessorInterf
                     $response['googleanalyticsid'] = $project->getGoogleanalyticsid();    
                 }
                 $response['googleconfirmationid'] = $project->getGoogleconfirmationid();
-                
                 $response['css'] = $project->getProjectembededcss();
                 $response['favicons'] = GeneralUtility::makeInstance(SimpleHelperUtility::class)->generateFavicons($project->getFaviconsX());
                 $processedData['project'] = $response;

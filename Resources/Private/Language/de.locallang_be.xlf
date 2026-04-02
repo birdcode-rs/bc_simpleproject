@@ -262,6 +262,10 @@
                 <source>Exclude from Sitemap</source>
                 <target>Von der Sitemap ausschließen</target>
             </trans-unit>
+            <trans-unit id="tx_bcsimpleproject_domain_model_t3projectdetails.holiday_flexible" resname="tx_bcsimpleproject_domain_model_t3projectdetails.holiday_flexible">
+                <source>e.g. 24.12. - 26.12. Closed or Special hours: 09:00 - 13:00</source>
+                <target>z.B. 24.12. - 26.12. Geschlossen oder Sonderöffnungszeiten: 09:00 - 13:00</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
